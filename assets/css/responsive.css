@@ -2083,9 +2083,9 @@
 /* Page Inner Hero Responsive */
 @media (max-width: 768px) {
   .page-inner-hero {
-    height: var(--inner-hero-height);
-    min-height: var(--inner-hero-height);
-    padding: 2rem 1rem;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 3.25rem 1rem 3rem 1rem !important;
     box-sizing: border-box;
   }
 
@@ -2142,6 +2142,89 @@
   .hero-cta-group a {
     width: auto;
     justify-content: center;
+  }
+}
+
+/* Page Inner Hero - Mobile Fine-Tuning (<= 480px / iPhone SE 375px) */
+@media (max-width: 480px) {
+  .page-inner-hero {
+    height: auto !important;
+    min-height: auto !important;
+    padding: 2.5rem 0.85rem 2.25rem 0.85rem !important;
+  }
+
+  .page-inner-hero .section-eyebrow {
+    font-size: 0.72rem !important;
+    padding: 0.35rem 0.85rem !important;
+    margin-bottom: 0.85rem !important;
+    white-space: normal !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .page-inner-title {
+    font-size: clamp(1.55rem, 5.5vw, 1.85rem) !important;
+    line-height: 1.22 !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .page-inner-desc {
+    font-size: 0.92rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1.2rem !important;
+  }
+
+  .about-hero-stats-row {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    padding: 1.15rem 1.25rem !important;
+    width: 100% !important;
+    max-width: 320px !important;
+  }
+
+  .contact-hero-actions-centered,
+  .hero-cta-group {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+  }
+
+  .contact-hero-actions-centered a,
+  .hero-cta-group a {
+    width: 100% !important;
+    max-width: 340px !important;
+    justify-content: center !important;
+  }
+
+  .contact-quick-badges-centered {
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+    width: 100% !important;
+    max-width: 340px !important;
+  }
+
+  .contact-quick-badges-centered .contact-badge-pill {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    font-size: 0.8rem !important;
+  }
+
+  .hero-action-pills {
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+    width: 100% !important;
+    max-width: 340px !important;
+  }
+
+  .hero-pill-item {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    font-size: 0.82rem !important;
   }
 }
 
