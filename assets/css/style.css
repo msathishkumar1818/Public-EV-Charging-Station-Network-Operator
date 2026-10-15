@@ -791,6 +791,12 @@ html.dark .theme-moon-icon {
   color: var(--text-main);
 }
 
+.mobile-control-item svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 .drawer-login-btn {
   display: flex;
   align-items: center;
