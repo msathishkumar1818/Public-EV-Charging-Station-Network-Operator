@@ -438,8 +438,8 @@
 
 
   .home2-hero-title {
-    font-size: 2.15rem;
-    line-height: 1.15;
+    font-size: 1.85rem;
+    line-height: 1.2;
   }
 
   .home2-hero-actions {
@@ -1015,7 +1015,8 @@
 
   /* Home 2 Journey Planner at 425px */
   .home2-hero-title {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    line-height: 1.22;
   }
 
   .planner-widget-card {
