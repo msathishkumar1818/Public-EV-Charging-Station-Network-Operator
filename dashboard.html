@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver Dashboard & Telemetry | VoltPulse Public EV Charging Network</title>
+  <meta name="description" content="Driver dashboard for locating nearby charging stations, initiating charging sessions, and managing payment methods.">
+  <link rel="icon" type="image/png" href="assets/images/icons/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="portal-body">
+
+  <!-- 1. Global Branded Loader -->
+  <div id="global-loader" role="status" aria-label="Loading VoltPulse Network">
+    <div class="loader-brand-wrapper">
+      <div class="loader-ring"></div>
+      <img src="assets/images/logo.png" alt="VoltPulse Brand Logo" class="loader-logo-img">
+    </div>
+    <div class="loader-text">
+      <span>Volt</span>Pulse EV Network
+    </div>
+  </div>
+
+  <!-- 2. Portal Full-Width Topbar -->
+  <header class="portal-topbar">
+    <a href="index.html" class="portal-brand-group" aria-label="VoltPulse Client Portal">
+      <img src="assets/images/logo.png" alt="VoltPulse Network Logo" class="portal-brand-logo">
+      <div class="portal-brand-meta">
+        <span class="portal-brand-name"><span>Volt</span>Pulse</span>
+        <span class="portal-brand-sub">Client Portal</span>
+      </div>
+    </a>
+
+    <div class="portal-topbar-controls">
+      <!-- Status Pill -->
+      <div class="portal-status-pill">
+        <span class="status-dot"></span>
+        <span>Systems Normal &bull; Live</span>
+      </div>
+
+      <!-- Logout / Switch Account Button -->
+      <a href="index.html" class="portal-logout-btn" aria-label="Log Out of Driver Portal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon" aria-hidden="true">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+        <span>Log Out</span>
+      </a>
+
+      <!-- RTL Toggle -->
+      <button type="button" class="icon-control-btn rtl-toggle-btn" aria-label="Switch text direction">
+        <span class="rtl-text-indicator">RTL</span>
+      </button>
+
+      <!-- Theme Toggle -->
+      <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle color theme">
+        <svg class="theme-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="theme-sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- 3. Portal Workspace (Sidebar + Main Area) -->
+  <div class="portal-workspace">
+
+    <!-- Left Vertical Sidebar -->
+    <aside class="portal-sidebar" aria-label="Portal Navigation">
+      <ul class="portal-nav-list">
+        <!-- 1. Overview -->
+        <li>
+          <a href="#tab-content-overview" class="portal-nav-link active" id="tab-overview" data-tab="tab-content-overview">
+            <span class="portal-nav-link-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              <span>Overview</span>
+            </span>
+          </a>
+        </li>
+
+        <!-- 2. Locate Stations -->
+        <li>
+          <a href="#tab-content-locate" class="portal-nav-link" id="tab-locate" data-tab="tab-content-locate">
+            <span class="portal-nav-link-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Locate Stations</span>
+            </span>
+          </a>
+        </li>
+
+        <!-- 3. Initiate Charging -->
+        <li>
+          <a href="#tab-content-session" class="portal-nav-link" id="tab-session" data-tab="tab-content-session">
+            <span class="portal-nav-link-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              <span>Charging Sessions</span>
+            </span>
+            <span class="portal-nav-badge live-badge">LIVE</span>
+          </a>
+        </li>
+
+        <!-- 4. Payment & Wallet -->
+        <li>
+          <a href="#tab-content-payment" class="portal-nav-link" id="tab-payment" data-tab="tab-content-payment">
+            <span class="portal-nav-link-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+              <span>Payment &amp; Wallet</span>
+            </span>
+          </a>
+        </li>
+
+        <!-- 5. RFID Keyfobs -->
+        <li>
+          <a href="#tab-content-rfid" class="portal-nav-link" id="tab-rfid" data-tab="tab-content-rfid">
+            <span class="portal-nav-link-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 2l-2 2m-2-2l2 2m0 0l-7 7m7-7l-2-2m-9 9l7-7m-7 7l-2 2m2-2l-2-2m0 4l2 2m-2-2l-7 7m7-7l-2-2m-9 9l7-7"></path>
+                <circle cx="7" cy="17" r="3"></circle>
+              </svg>
+              <span>RFID Keyfobs</span>
+            </span>
+            <span class="portal-nav-badge">1</span>
+          </a>
+        </li>
+
+        <!-- 6. Public Website Link -->
+        <li>
+          <a href="index.html" class="portal-nav-link">
+            <span class="portal-nav-link-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Public Website</span>
+            </span>
+          </a>
+        </li>
+
+        <!-- 7. Log Out Button in Sidebar -->
+        <li>
+          <a href="index.html" class="portal-nav-link portal-nav-logout" id="tab-logout" aria-label="Log Out of Driver Portal">
+            <span class="portal-nav-link-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+              </svg>
+              <span>Log Out</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Client Facility / Vehicle Box at Bottom of Sidebar -->
+      <div class="portal-sidebar-card">
+        <span class="portal-card-sublabel">Connected Vehicle</span>
+        <span class="portal-card-heading">Tesla Model Y &bull; Dual Motor</span>
+        <div class="footer-status-pill">
+          <span class="status-dot"></span>
+          <span>24/7 Active Monitoring</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <main class="portal-main-panel" id="main-content">
+
+      <!-- ==========================================================================
+           TAB 1: OVERVIEW DASHBOARD
+           ========================================================================== -->
+      <section class="portal-tab-panel active" id="tab-content-overview" aria-label="Overview Dashboard">
+        <!-- 1. Dark Welcome Banner Card -->
+        <div class="portal-welcome-card" id="overview-section">
+          <div>
+            <h1 class="portal-welcome-title">Hello, Rohit</h1>
+            <p class="portal-welcome-sub">
+              Tesla Model Y Long Range &bull; Vehicle ID: VP-EV-9042 &bull; Preferred Corridor: I-95 North Superhub
+            </p>
+          </div>
+
+          <button type="button" class="portal-action-cta-btn" id="banner-initiate-btn">
+            <span>+ Initiate Charging Session</span>
+          </button>
+        </div>
+
+        <!-- 2. Overview Heading -->
+        <div class="portal-overview-header">
+          <h2 class="portal-overview-title">Overview</h2>
+          <p class="portal-overview-desc">
+            Everything open on your EV charging account right now.
+          </p>
+        </div>
+
+        <!-- 3. Four Metric Stat Cards (1 Row) -->
+        <div class="portal-metrics-grid">
+          <!-- Metric 1: Active Sessions -->
+          <div class="portal-metric-card" role="button" tabindex="0" data-switch-tab="tab-content-session" style="cursor: pointer;" title="Click to view Charging Sessions">
+            <span class="portal-metric-label">Active Sessions</span>
+            <span class="portal-metric-value val-cyan">1</span>
+            <span class="portal-metric-note">Stall 04B (350 kW Ultra-Fast) active &rarr;</span>
+          </div>
+
+          <!-- Metric 2: Wallet Balance -->
+          <div class="portal-metric-card" role="button" tabindex="0" data-switch-tab="tab-content-payment" style="cursor: pointer;" title="Click to view Digital Wallet">
+            <span class="portal-metric-label">Wallet Balance</span>
+            <span class="portal-metric-value val-amber">$48.50</span>
+            <span class="portal-metric-note">Auto-reload active via Visa &bull;&bull;&bull;&bull; 4821 &rarr;</span>
+          </div>
+
+          <!-- Metric 3: Sensors Monitored / Energy -->
+          <div class="portal-metric-card" role="button" tabindex="0" data-switch-tab="tab-content-locate" style="cursor: pointer;" title="Click to view Nearby Stations">
+            <span class="portal-metric-label">Sensors Monitored</span>
+            <span class="portal-metric-value val-emerald">1,750</span>
+            <span class="portal-metric-note">Across 18 superhubs &amp; power cabinets &rarr;</span>
+          </div>
+
+          <!-- Metric 4: Compliance / ESG Reports -->
+          <div class="portal-metric-card">
+            <span class="portal-metric-label">Compliance Reports</span>
+            <span class="portal-metric-value val-purple">3</span>
+            <span class="portal-metric-note">HACCP &amp; Scope 2 audit ready to download</span>
+          </div>
+        </div>
+
+        <!-- 4. Standalone Overview 4-Card Grid (Completely Separate Cards) -->
+        <div class="portal-overview-grid">
+          <!-- Standalone Card 1: Nearby Charging Stations -->
+          <div class="portal-panel-card" id="nearby-stations-section">
+            <div class="portal-panel-header">
+              <h3 class="portal-panel-title">Nearby Charging Stations</h3>
+              <a href="#tab-content-locate" class="portal-panel-link" data-switch-tab="tab-content-locate">View Full Stations Tab &rarr;</a>
+            </div>
+
+            <div class="portal-stations-list">
+              <!-- Station 1 -->
+              <div class="portal-station-item">
+                <div class="portal-station-info">
+                  <span class="portal-station-name">I-95 Superhub Travel Plaza</span>
+                  <span class="portal-station-meta">10 / 12 Stalls Free &bull; 350 kW DC Fast &bull; 2.4 miles away</span>
+                </div>
+                <div class="portal-controller-row">
+                  <span class="portal-station-status-tag tag-available">Available</span>
+                  <button type="button" class="portal-mini-action-btn quick-charge-btn" data-station="I-95 Superhub Plaza (Stall 04B)">
+                    Initiate Charge
+                  </button>
+                </div>
+              </div>
+
+              <!-- Station 2 -->
+              <div class="portal-station-item">
+                <div class="portal-station-info">
+                  <span class="portal-station-name">Metro Commerce Center Hub</span>
+                  <span class="portal-station-meta">4 / 6 Stalls Free &bull; 150 kW DC Fast &bull; 4.1 miles away</span>
+                </div>
+                <div class="portal-controller-row">
+                  <span class="portal-station-status-tag tag-available">Available</span>
+                  <button type="button" class="portal-mini-action-btn quick-charge-btn" data-station="Metro Commerce Hub (Stall 02A)">
+                    Initiate Charge
+                  </button>
+                </div>
+              </div>
+
+              <!-- Station 3 -->
+              <div class="portal-station-item">
+                <div class="portal-station-info">
+                  <span class="portal-station-name">Downtown Transit Depots</span>
+                  <span class="portal-station-meta">1 / 8 Stalls Free &bull; 50 kW Fast &bull; 7.8 miles away</span>
+                </div>
+                <div class="portal-controller-row">
+                  <span class="portal-station-status-tag tag-busy">Busy</span>
+                  <button type="button" class="portal-mini-action-btn quick-charge-btn" data-station="Downtown Depots (Stall 01)">
+                    Reserve Stall
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Standalone Card 2: Initiate & Manage Charging Session -->
+          <div class="portal-panel-card" id="initiate-charging-section">
+            <div class="portal-panel-header">
+              <h3 class="portal-panel-title">Initiate &amp; Manage Charging Session</h3>
+              <span class="portal-station-status-tag tag-available" id="session-status-tag">Connected &bull; Active</span>
+            </div>
+
+            <div class="portal-session-controller">
+              <div class="portal-controller-row">
+                <div>
+                  <span class="portal-card-sublabel">Connected Dispenser</span>
+                  <div class="portal-station-name" id="active-station-display">I-95 Superhub &bull; Stall 04B (CCS2 / 350 kW)</div>
+                </div>
+                <span class="footer-status-pill">
+                  <span class="status-dot"></span>
+                  <span id="session-telemetry-state">248 kW Output</span>
+                </span>
+              </div>
+
+              <!-- Telemetry Stats -->
+              <div class="portal-controller-stats">
+                <div class="portal-ctrl-stat">
+                  <span class="portal-ctrl-stat-num" id="telemetry-kw">248 kW</span>
+                  <span class="portal-ctrl-stat-lbl">Charging Speed</span>
+                </div>
+                <div class="portal-ctrl-stat">
+                  <span class="portal-ctrl-stat-num" id="telemetry-kwh">46.2 kWh</span>
+                  <span class="portal-ctrl-stat-lbl">Energy Delivered</span>
+                </div>
+                <div class="portal-ctrl-stat">
+                  <span class="portal-ctrl-stat-num" id="telemetry-time">12 Min</span>
+                  <span class="portal-ctrl-stat-lbl">Est. to 80% SoC</span>
+                </div>
+              </div>
+
+              <!-- Battery SoC Progress Bar -->
+              <div class="session-soc-bar-wrap">
+                <div class="portal-controller-row">
+                  <span class="portal-card-sublabel">Battery State of Charge</span>
+                  <span class="portal-ctrl-stat-num" id="soc-percent-label">74%</span>
+                </div>
+                <div class="session-soc-bar-bg">
+                  <div class="session-soc-bar-fill" id="soc-bar-fill"></div>
+                </div>
+              </div>
+
+              <!-- Initiate & Stop Buttons -->
+              <div class="portal-session-actions-row">
+                <button type="button" class="portal-start-btn" id="start-new-session-btn">
+                  <span>Start New Session</span>
+                </button>
+                <button type="button" class="portal-stop-btn" id="stop-active-session-btn">
+                  <span>Stop Active Session</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Standalone Card 3: Payment Methods & Digital Wallet -->
+          <div class="portal-panel-card" id="payment-methods-section">
+            <div class="portal-panel-header">
+              <h3 class="portal-panel-title">Payment Methods &amp; Wallet</h3>
+              <a href="#tab-content-payment" class="portal-panel-link" data-switch-tab="tab-content-payment">Manage Wallet &rarr;</a>
+            </div>
+
+            <div class="portal-wallet-box">
+              <!-- Primary Card -->
+              <div class="portal-card-item">
+                <div class="portal-card-brand-wrap">
+                  <div class="portal-card-icon">VISA</div>
+                  <div>
+                    <div class="portal-card-digits">Visa ending in 4821</div>
+                    <div class="portal-card-exp">Expires 09/28 &bull; Primary Card</div>
+                  </div>
+                </div>
+                <span class="portal-station-status-tag tag-available">Default</span>
+              </div>
+
+              <!-- Secondary Apple Pay / Google Pay -->
+              <div class="portal-card-item">
+                <div class="portal-card-brand-wrap">
+                  <div class="portal-card-icon">PAY</div>
+                  <div>
+                    <div class="portal-card-digits">Apple Pay / Contactless</div>
+                    <div class="portal-card-exp">Device Token Active</div>
+                  </div>
+                </div>
+                <span class="portal-station-status-tag tag-available">Synced</span>
+              </div>
+
+              <!-- Auto-Reload Settings Row -->
+              <div class="portal-autoreload-row">
+                <div>
+                  <div class="portal-card-digits">Auto-Reload Threshold</div>
+                  <div class="portal-card-exp">Adds $50 when balance &lt; $15.00</div>
+                </div>
+                <span class="val-emerald">$50.00</span>
+              </div>
+
+              <!-- Add Payment Method Button -->
+              <button type="button" class="portal-add-payment-btn" id="add-payment-btn">
+                <span>+ Add New Payment Method</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Standalone Card 4: Physical RFID Smartcard -->
+          <div class="portal-panel-card" id="rfid-keyfobs-section">
+            <div class="portal-panel-header">
+              <h3 class="portal-panel-title">Physical RFID Smartcard</h3>
+              <a href="#tab-content-rfid" class="portal-panel-link" data-switch-tab="tab-content-rfid">Manage Keyfob &rarr;</a>
+            </div>
+            <div class="portal-station-info">
+              <span class="portal-station-name">Keyfob ID: VP-9840-X</span>
+              <span class="portal-station-meta">Assigned to Tesla Model Y &bull; Instant Tap Authentication &bull; AES-256 Encrypted</span>
+            </div>
+            <div class="hotline-btn-wrap">
+              <a href="contact.html" class="portal-add-payment-btn portal-block-btn">
+                <span>Order Free Replacement Smartcard &rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ==========================================================================
+           TAB 2: LOCATE CHARGING STATIONS (DEDICATED VIEW)
+           ========================================================================== -->
+      <section class="portal-tab-panel" id="tab-content-locate" aria-label="Locate Stations">
+        <div class="portal-section-header-row">
+          <div>
+            <h2 class="portal-overview-title">Locate Nearby Charging Stations</h2>
+            <p class="portal-overview-desc">Browse real-time status and initiate high-speed charging at over 1,750 stalls across 18 superhubs.</p>
+          </div>
+          <button type="button" class="portal-back-overview-btn" data-back="overview">
+            &larr; Back to Overview
+          </button>
+        </div>
+
+        <div class="portal-panel-card portal-panel-card-full">
+          <div class="portal-panel-header">
+            <h3 class="portal-panel-title">Network Superhubs &amp; Live Availability</h3>
+            <a href="find-charger.html" class="portal-panel-link">Open Full Interactive Map &rarr;</a>
+          </div>
+
+          <div class="portal-stations-list">
+            <!-- Station 1 -->
+            <div class="portal-station-item">
+              <div class="portal-station-info">
+                <span class="portal-station-name">I-95 Superhub Travel Plaza</span>
+                <span class="portal-station-meta">10 / 12 Stalls Free &bull; 350 kW DC Fast &bull; 2.4 miles away &bull; Lounge, Wi-Fi &amp; Restrooms</span>
+              </div>
+              <div class="portal-controller-row">
+                <span class="portal-station-status-tag tag-available">Available (10 Stalls)</span>
+                <button type="button" class="portal-mini-action-btn quick-charge-btn" data-station="I-95 Superhub Plaza (Stall 04B)">
+                  Initiate Charge
+                </button>
+              </div>
+            </div>
+
+            <!-- Station 2 -->
+            <div class="portal-station-item">
+              <div class="portal-station-info">
+                <span class="portal-station-name">Metro Commerce Center Hub</span>
+                <span class="portal-station-meta">4 / 6 Stalls Free &bull; 150 kW DC Fast &bull; 4.1 miles away &bull; Retail &amp; Coffee Shop</span>
+              </div>
+              <div class="portal-controller-row">
+                <span class="portal-station-status-tag tag-available">Available (4 Stalls)</span>
+                <button type="button" class="portal-mini-action-btn quick-charge-btn" data-station="Metro Commerce Hub (Stall 02A)">
+                  Initiate Charge
+                </button>
+              </div>
+            </div>
+
+            <!-- Station 3 -->
+            <div class="portal-station-item">
+              <div class="portal-station-info">
+                <span class="portal-station-name">Downtown Transit Depots</span>
+                <span class="portal-station-meta">1 / 8 Stalls Free &bull; 50 kW Fast &bull; 7.8 miles away &bull; Public Transit Hub</span>
+              </div>
+              <div class="portal-controller-row">
+                <span class="portal-station-status-tag tag-busy">Busy (1 Stall Left)</span>
+                <button type="button" class="portal-mini-action-btn quick-charge-btn" data-station="Downtown Depots (Stall 01)">
+                  Reserve Stall
+                </button>
+              </div>
+            </div>
+
+            <!-- Station 4 -->
+            <div class="portal-station-item">
+              <div class="portal-station-info">
+                <span class="portal-station-name">Mid-Way Corridor Superhub</span>
+                <span class="portal-station-meta">8 / 8 Stalls Free &bull; 350 kW Ultra-Fast &bull; 12.3 miles away &bull; 24/7 Security</span>
+              </div>
+              <div class="portal-controller-row">
+                <span class="portal-station-status-tag tag-available">Available (All Stalls)</span>
+                <button type="button" class="portal-mini-action-btn quick-charge-btn" data-station="Mid-Way Corridor Superhub (Stall 01A)">
+                  Initiate Charge
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ==========================================================================
+           TAB 3: CHARGING SESSIONS & TELEMETRY (DEDICATED VIEW)
+           ========================================================================== -->
+      <section class="portal-tab-panel" id="tab-content-session" aria-label="Charging Sessions">
+        <div class="portal-section-header-row">
+          <div>
+            <h2 class="portal-overview-title">Active Charging Session &amp; Live Telemetry</h2>
+            <p class="portal-overview-desc">Monitor live dispenser telemetry, power delivery, state of charge (SoC), and remote session controls.</p>
+          </div>
+          <button type="button" class="portal-back-overview-btn" data-back="overview">
+            &larr; Back to Overview
+          </button>
+        </div>
+
+        <div class="portal-panel-card portal-panel-card-full">
+          <div class="portal-panel-header">
+            <h3 class="portal-panel-title">Session Telemetry Controller</h3>
+            <span class="portal-station-status-tag tag-available" id="session-status-tag-tab">Connected &bull; Active</span>
+          </div>
+
+          <div class="portal-session-controller">
+            <div class="portal-controller-row">
+              <div>
+                <span class="portal-card-sublabel">Connected Dispenser</span>
+                <div class="portal-station-name" id="active-station-display-tab">I-95 Superhub &bull; Stall 04B (CCS2 / 350 kW Ultra-Fast)</div>
+              </div>
+              <span class="footer-status-pill">
+                <span class="status-dot"></span>
+                <span id="session-telemetry-state-tab">248 kW Output</span>
+              </span>
+            </div>
+
+            <!-- Telemetry Stats -->
+            <div class="portal-controller-stats">
+              <div class="portal-ctrl-stat">
+                <span class="portal-ctrl-stat-num" id="telemetry-kw-tab">248 kW</span>
+                <span class="portal-ctrl-stat-lbl">Charging Speed</span>
+              </div>
+              <div class="portal-ctrl-stat">
+                <span class="portal-ctrl-stat-num" id="telemetry-kwh-tab">46.2 kWh</span>
+                <span class="portal-ctrl-stat-lbl">Energy Delivered</span>
+              </div>
+              <div class="portal-ctrl-stat">
+                <span class="portal-ctrl-stat-num" id="telemetry-time-tab">12 Min</span>
+                <span class="portal-ctrl-stat-lbl">Est. to 80% SoC</span>
+              </div>
+            </div>
+
+            <!-- Battery SoC Progress Bar -->
+            <div class="session-soc-bar-wrap">
+              <div class="portal-controller-row">
+                <span class="portal-card-sublabel">Battery State of Charge</span>
+                <span class="portal-ctrl-stat-num" id="soc-percent-label-tab">74%</span>
+              </div>
+              <div class="session-soc-bar-bg">
+                <div class="session-soc-bar-fill" id="soc-bar-fill-tab"></div>
+              </div>
+            </div>
+
+            <!-- Initiate & Stop Buttons -->
+            <div class="portal-session-actions-row">
+              <button type="button" class="portal-start-btn" id="start-new-session-btn-tab">
+                <span>Start New Session</span>
+              </button>
+              <button type="button" class="portal-stop-btn" id="stop-active-session-btn-tab">
+                <span>Stop Active Session</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ==========================================================================
+           TAB 4: PAYMENT METHODS & DIGITAL WALLET (DEDICATED VIEW)
+           ========================================================================== -->
+      <section class="portal-tab-panel" id="tab-content-payment" aria-label="Payment and Wallet">
+        <div class="portal-section-header-row">
+          <div>
+            <h2 class="portal-overview-title">Payment Methods &amp; Digital Wallet</h2>
+            <p class="portal-overview-desc">Manage credit cards, contactless mobile wallets, corporate billing, and auto-reload thresholds.</p>
+          </div>
+          <button type="button" class="portal-back-overview-btn" data-back="overview">
+            &larr; Back to Overview
+          </button>
+        </div>
+
+        <div class="portal-panel-card portal-panel-card-full">
+          <div class="portal-panel-header">
+            <h3 class="portal-panel-title">Saved Payment Methods</h3>
+            <span class="portal-panel-link">Auto-Reload Active</span>
+          </div>
+
+          <div class="portal-wallet-box">
+            <!-- Primary Card -->
+            <div class="portal-card-item">
+              <div class="portal-card-brand-wrap">
+                <div class="portal-card-icon">VISA</div>
+                <div>
+                  <div class="portal-card-digits">Visa ending in 4821</div>
+                  <div class="portal-card-exp">Expires 09/28 &bull; Primary Card &bull; Default Billing</div>
+                </div>
+              </div>
+              <span class="portal-station-status-tag tag-available">Default</span>
+            </div>
+
+            <!-- Secondary Apple Pay / Google Pay -->
+            <div class="portal-card-item">
+              <div class="portal-card-brand-wrap">
+                <div class="portal-card-icon">PAY</div>
+                <div>
+                  <div class="portal-card-digits">Apple Pay / Contactless</div>
+                  <div class="portal-card-exp">Device Token Active &bull; Instant One-Touch Verification</div>
+                </div>
+              </div>
+              <span class="portal-station-status-tag tag-available">Synced</span>
+            </div>
+
+            <!-- Auto-Reload Settings Row -->
+            <div class="portal-autoreload-row">
+              <div>
+                <div class="portal-card-digits">Auto-Reload Threshold</div>
+                <div class="portal-card-exp">Automatically tops up $50.00 whenever account wallet balance dips below $15.00</div>
+              </div>
+              <span class="val-emerald" style="font-size: 1.35rem; font-weight: 800;">$50.00</span>
+            </div>
+
+            <!-- Add Payment Method Button -->
+            <button type="button" class="portal-add-payment-btn" id="add-payment-btn-tab">
+              <span>+ Add New Payment Card or Corporate Fleet Account</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ==========================================================================
+           TAB 5: PHYSICAL RFID KEYFOBS & SMARTCARDS (DEDICATED VIEW)
+           ========================================================================== -->
+      <section class="portal-tab-panel" id="tab-content-rfid" aria-label="RFID Keyfobs">
+        <div class="portal-section-header-row">
+          <div>
+            <h2 class="portal-overview-title">Physical RFID Keyfobs &amp; Smartcards</h2>
+            <p class="portal-overview-desc">Authorize charging sessions offline with your high-security tap-to-charge cryptographic smartcard.</p>
+          </div>
+          <button type="button" class="portal-back-overview-btn" data-back="overview">
+            &larr; Back to Overview
+          </button>
+        </div>
+
+        <div class="portal-panel-card portal-panel-card-full">
+          <div class="portal-panel-header">
+            <h3 class="portal-panel-title">Active Keyfob Credentials</h3>
+            <span class="portal-station-status-tag tag-available">Active &bull; Verified</span>
+          </div>
+
+          <div class="portal-station-info" style="gap: 0.65rem; padding: 1rem 0;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span class="portal-station-name" style="font-size: 1.15rem;">Keyfob ID: VP-9840-X</span>
+              <span class="portal-nav-badge live-badge">ONLINE</span>
+            </div>
+            <p class="portal-station-meta" style="font-size: 0.85rem; line-height: 1.5;">
+              Assigned Vehicle: <strong>Tesla Model Y Long Range (VP-EV-9042)</strong><br>
+              Authentication: <strong>Instant Tap NFC / RFID (13.56 MHz ISO 14443A)</strong><br>
+              Encryption: <strong>AES-256 Cloud Hardware Token</strong>
+            </p>
+          </div>
+
+          <div class="hotline-btn-wrap" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="contact.html" class="portal-add-payment-btn" style="flex: 1; text-align: center;">
+              <span>Order Free Replacement Smartcard &rarr;</span>
+            </a>
+            <button type="button" class="portal-mini-action-btn" onclick="alert('RFID Keyfob VP-9840-X signal refreshed! Status: 100% Operational.');" style="padding: 0.75rem 1.5rem;">
+              Test Keyfob Signal
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Shared Script -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

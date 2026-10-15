@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & 24/7 Support | VoltPulse Public EV Charging Network</title>
+  <meta name="description"
+    content="Get 24/7 roadside charging assistance, submit driver support inquiries, connect with fleet operations, or visit our regional support hubs.">
+  <link rel="icon" type="image/png" href="assets/images/icons/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- 1. Global Branded Loader -->
+  <div id="global-loader" role="status" aria-label="Loading VoltPulse Network">
+    <div class="loader-brand-wrapper">
+      <div class="loader-ring"></div>
+      <img src="assets/images/logo.png" alt="VoltPulse Brand Logo" class="loader-logo-img">
+    </div>
+    <div class="loader-text">
+      <span>Volt</span>Pulse EV Network
+    </div>
+  </div>
+
+  <!-- 2. Global Fixed Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <!-- Logo + Brand -->
+      <a href="index.html" class="brand-link" aria-label="VoltPulse EV Network Home">
+        <img src="assets/images/logo.png" alt="VoltPulse EV Network Logo" class="brand-logo-img">
+        <div class="brand-meta">
+          <span class="brand-name"><span>Volt</span>Pulse</span>
+          <span class="brand-tagline">EV Charging Network</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation: Exactly 6 Nav Items in 1 Line -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <!-- 1. Home Dropdown (Click Only) -->
+        <div class="nav-dropdown-wrapper">
+          <button type="button" class="dropdown-toggle-btn" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="index.html" class="dropdown-item-link">Home 1 (Highway & Metro)</a></li>
+            <li><a href="home-2.html" class="dropdown-item-link">Home 2 (Fleet & Commercial)</a></li>
+          </ul>
+        </div>
+
+        <!-- 2. Find Charger -->
+        <a href="find-charger.html" class="nav-link">Find Charger</a>
+
+        <!-- 3. Pricing -->
+        <a href="pricing.html" class="nav-link">Pricing</a>
+
+        <!-- 4. About (Mandatory) -->
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- 5. Contact (Active) -->
+        <a href="contact.html" class="nav-link active">Contact</a>
+
+        <!-- 6. Dashboard (Next to Contact) -->
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <!-- Desktop Header Controls: RTL/LTR + Dark Mode + Login Button -->
+      <div class="header-actions">
+        <!-- RTL Toggle -->
+        <button type="button" class="icon-control-btn rtl-toggle-btn" aria-label="Switch text direction">
+          <span class="rtl-text-indicator">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle color theme">
+          <svg class="theme-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Login Button -->
+        <a href="login.html" class="header-login-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Driver Login</span>
+        </a>
+
+        <!-- Header Primary CTA Button -->
+        <a href="find-charger.html" class="header-cta-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <span>Find Charger</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-open-btn" aria-label="Open mobile navigation menu"
+          aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Mobile Navigation Drawer & Backdrop -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand-link">
+        <img src="assets/images/logo.png" alt="VoltPulse EV Network Logo" class="brand-logo-img">
+        <div class="brand-meta">
+          <span class="brand-name"><span>Volt</span>Pulse</span>
+          <span class="brand-tagline">EV Charging Network</span>
+        </div>
+      </div>
+      <button type="button" class="drawer-close-btn" id="mobile-menu-close-btn"
+        aria-label="Close mobile navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" class="drawer-close-svg" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="mobile-nav-list">
+        <!-- Home Accordion -->
+        <li class="mobile-accordion-wrapper">
+          <button type="button" class="mobile-accordion-toggle" aria-expanded="false">
+            <span>Home Variations</span>
+            <svg class="dropdown-icon accordion-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <ul class="mobile-accordion-content">
+            <li><a href="index.html" class="mobile-sub-link">Home 1 (Highway & Metro)</a></li>
+            <li><a href="home-2.html" class="mobile-sub-link">Home 2 (Fleet & Commercial)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="find-charger.html" class="mobile-nav-link">Find Charger</a></li>
+        <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+        <li><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      </ul>
+
+      <div class="drawer-actions">
+        <div class="mobile-controls-row">
+          <!-- RTL Control -->
+          <button type="button" class="mobile-control-item rtl-toggle-btn" aria-label="Toggle text direction">
+            <span class="rtl-text-indicator">RTL</span>
+            <span>Direction</span>
+          </button>
+
+          <!-- Theme Control -->
+          <button type="button" class="mobile-control-item theme-toggle-btn" aria-label="Toggle dark mode">
+            <svg class="theme-moon-icon mobile-control-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="theme-sun-icon mobile-control-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+            </svg>
+            <span>Theme</span>
+          </button>
+        </div>
+
+        <a href="login.html" class="drawer-login-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" class="drawer-btn-icon" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Driver Login / Register</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT: EXACTLY 5 CONTENT SECTIONS FOR INNER PAGE 04 -->
+  <main id="main-content">
+
+    <!-- =========================================================
+         SECTION 1: CONTACT HERO WITH GOOGLE MAP CTA BUTTON
+         ========================================================= -->
+    <section class="page-inner-hero" id="contact-hero">
+      <img src="assets/images/sections/p36.jpg" alt="VoltPulse 24/7 Driver Support and Operations Plaza"
+        class="page-inner-backdrop">
+      <div class="page-inner-overlay" aria-hidden="true"></div>
+      <div class="site-container">
+        <div class="hero-inner-content">
+          <div class="section-eyebrow">24/7 Driver Support & Operations</div>
+          <h1 class="page-inner-title">
+            We Are Here to <span class="gradient-text">Keep You Moving</span>
+          </h1>
+          <p class="page-inner-desc">
+            Encountering an active stall issue or exploring fleet charging partnerships? Our rapid-response
+            engineering team is standing by 24/7 across every network corridor.
+          </p>
+
+          <!-- Centered CTA Actions -->
+          <div class="contact-hero-actions-centered">
+            <a href="https://maps.google.com/?q=Times+Square,+New+York,+NY" target="_blank" rel="noopener noreferrer"
+              class="cta-primary-btn" id="hero-map-cta-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" class="btn-icon" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Open in Google Maps</span>
+            </a>
+            <a href="#inquiry-form" class="cta-secondary-btn" id="hero-form-cta-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" class="btn-icon" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span>Submit Support Request</span>
+            </a>
+          </div>
+
+          <!-- Quick Hotline & Support Badges Centered -->
+          <div class="contact-quick-badges-centered">
+            <div class="contact-badge-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>Hotline: 1-800-VOLT-EV</span>
+            </div>
+            <div class="contact-badge-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>support@voltpulse.network</span>
+            </div>
+            <div class="contact-badge-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Avg Call Answer: &lt; 45s</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 2: DRIVER INQUIRY & OPERATIONS FORM
+         ========================================================= -->
+    <section class="network-section" id="inquiry-form">
+      <div class="site-container">
+        <div class="contact-main-grid">
+          <!-- Support Form Column -->
+          <div class="contact-form-card">
+            <div class="contact-card-header">
+              <div class="power-level-tag">Dispatch Center</div>
+              <h2 class="contact-card-title">Send a Priority Inquiry</h2>
+              <p class="contact-card-desc">
+                Fill out the form below. For active charging stall assistance, please call our direct hotline
+                immediately.
+              </p>
+            </div>
+
+            <form id="driver-support-form" class="contact-form-body">
+              <div>
+                <div class="contact-fields-row">
+                  <div class="contact-field-group">
+                    <label for="contact-name" class="contact-field-label">Your Name</label>
+                    <input type="text" id="contact-name" class="contact-input-field" placeholder="Alex Morgan" required>
+                  </div>
+                  <div class="contact-field-group">
+                    <label for="contact-email" class="contact-field-label">Email Address</label>
+                    <input type="email" id="contact-email" class="contact-input-field" placeholder="alex@domain.com"
+                      required>
+                  </div>
+                </div>
+
+                <div class="contact-fields-row form-row-spaced">
+                  <div class="contact-field-group">
+                    <label for="contact-phone" class="contact-field-label">Phone Number</label>
+                    <input type="tel" id="contact-phone" class="contact-input-field" placeholder="+1 (555) 019-2834">
+                  </div>
+                  <div class="contact-field-group">
+                    <label for="contact-topic" class="contact-field-label">Inquiry Topic</label>
+                    <select id="contact-topic" class="contact-select-field">
+                      <option value="stall">Live Stall / Charging Assistance</option>
+                      <option value="rfid">RFID Fob Delivery / Sync</option>
+                      <option value="fleet">Commercial Fleet Account</option>
+                      <option value="host">Host a VoltPulse Hub on Property</option>
+                      <option value="billing">Billing & Digital Receipts</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="contact-field-group form-group-spaced">
+                  <label for="contact-msg" class="contact-field-label">Message Details</label>
+                  <textarea id="contact-msg" class="contact-textarea-field"
+                    placeholder="Provide station ID, location, or fleet size..." required></textarea>
+                </div>
+              </div>
+
+              <div class="form-submit-wrap">
+                <button type="submit" class="contact-submit-btn">
+                  <span>Submit Support Request</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Operations Help Desk Column -->
+          <div class="contact-hotline-card">
+            <div class="contact-card-header">
+              <div class="power-level-tag">Live Operations</div>
+              <h3 class="contact-card-title">24/7 Roadside Driver Hotline</h3>
+              <p class="contact-card-desc">
+                If your connector is locked or payment terminal requires reset, our engineers can remotely command
+                stalls instantly.
+              </p>
+            </div>
+
+            <div class="contact-hotline-body">
+              <div>
+                <div class="hotline-highlight-box">
+                  <span class="hotline-meta-label">Toll-Free Dispatch</span>
+                  <span class="hotline-num">1-800-865-8381</span>
+                  <span class="hotline-meta-sub">Available 24/7/365 &bull; Multi-Language Support</span>
+                </div>
+
+                <ul class="hotline-specs-list">
+                  <li class="hotline-spec-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Remote stall reset & connector unlock</span>
+                  </li>
+                  <li class="hotline-spec-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Alternative nearby high-speed rerouting</span>
+                  </li>
+                  <li class="hotline-spec-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Over-the-air charger diagnostics</span>
+                  </li>
+                  <li class="hotline-spec-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Priority technician emergency dispatch</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="hotline-btn-wrap">
+                <a href="tel:18008658381" class="contact-call-action-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" class="btn-icon" aria-hidden="true">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg>
+                  <span>Call 1-800-865-8381 Toll-Free</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 3: INTERACTIVE GOOGLE MAP & HEADQUARTERS
+         ========================================================= -->
+    <section class="network-section" id="interactive-map">
+      <div class="site-container">
+        <div class="section-head">
+          <div class="section-eyebrow">Interactive Location Radar</div>
+          <h2 class="section-title">Network Operations Center & Hub</h2>
+          <p class="section-subtitle">
+            Visit our National Operations Center or navigate directly via live Google Maps routing.
+          </p>
+        </div>
+
+        <div class="contact-map-box">
+          <!-- Google Maps Embed -->
+          <iframe class="contact-map-iframe" title="VoltPulse EV Charging Network Operations Center Map"
+            src="https://maps.google.com/maps?q=Times%20Square,%20New%20York,%20NY&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            loading="lazy" allowfullscreen>
+          </iframe>
+
+          <!-- Map Overlay Card with Dedicated Google Maps CTA Button -->
+          <div class="contact-map-overlay">
+            <div>
+              <div class="contact-map-title">VoltPulse National Operations Plaza</div>
+              <div class="contact-map-address">450 Lexington Ave, New York, NY 10017 &bull; 12 High-Power 350 kW Stalls
+                On-Site</div>
+            </div>
+            <a href="https://maps.google.com/?q=Times+Square,+New+York,+NY" target="_blank" rel="noopener noreferrer"
+              class="cta-primary-btn contact-map-btn">
+              <span>Get Directions on Google Maps</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" class="btn-icon" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 4: REGIONAL SUPPORT HUBS (4 Even Cards)
+         ========================================================= -->
+    <section class="network-section" id="regional-hubs">
+      <div class="site-container">
+        <div class="section-head">
+          <div class="section-eyebrow">Local Presence</div>
+          <h2 class="section-title">Regional Engineering Hubs</h2>
+          <p class="section-subtitle">
+            Field service technicians stationed along key highway intersections for sub-hour dispatch.
+          </p>
+        </div>
+
+        <div class="regional-quad-grid">
+          <!-- Hub 1 -->
+          <div class="regional-hub-card">
+            <div>
+              <div class="hub-region-tag">Northeast Corridor</div>
+              <h3 class="hub-region-title">New York Operations</h3>
+              <p class="hub-region-desc">
+                Serving I-95, I-80, and the Mid-Atlantic transit network with 24/7 mobile technician crews.
+              </p>
+            </div>
+            <div class="hub-region-contact">
+              Tel: +1 (212) 555-0192 &bull; 85 Stalls Maintained
+            </div>
+          </div>
+
+          <!-- Hub 2 -->
+          <div class="regional-hub-card">
+            <div>
+              <div class="hub-region-tag">West Coast Grid</div>
+              <h3 class="hub-region-title">Los Angeles Center</h3>
+              <p class="hub-region-desc">
+                Managing Interstate 5 and Pacific Coast Highway fast-charging corridors and battery buffers.
+              </p>
+            </div>
+            <div class="hub-region-contact">
+              Tel: +1 (310) 555-0144 &bull; 140 Stalls Maintained
+            </div>
+          </div>
+
+          <!-- Hub 3 -->
+          <div class="regional-hub-card">
+            <div>
+              <div class="hub-region-tag">Midwest Transit</div>
+              <h3 class="hub-region-title">Chicago Logistics Hub</h3>
+              <p class="hub-region-desc">
+                Specialized in commercial fleet depot power management and heavy winter sub-zero reliability.
+              </p>
+            </div>
+            <div class="hub-region-contact">
+              Tel: +1 (312) 555-0188 &bull; 95 Stalls Maintained
+            </div>
+          </div>
+
+          <!-- Hub 4 -->
+          <div class="regional-hub-card">
+            <div>
+              <div class="hub-region-tag">Southern Sunbelt</div>
+              <h3 class="hub-region-title">Dallas Superhub</h3>
+              <p class="hub-region-desc">
+                Solar-paired highway travel plazas covering I-35, I-20, and major southern freight arteries.
+              </p>
+            </div>
+            <div class="hub-region-contact">
+              Tel: +1 (214) 555-0176 &bull; 110 Stalls Maintained
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 5: CONTACT CTA BANNER (Mandatory Final Section)
+         ========================================================= -->
+    <section class="network-section" id="contact-cta">
+      <div class="site-container">
+        <div class="cta-banner-wrapper">
+          <img src="assets/images/sections/contact-cta.jpg" alt="Electric vehicle driving at night on highway"
+            class="cta-backdrop-img">
+          <div class="cta-content-box">
+            <div class="section-eyebrow">Ready To Charge?</div>
+            <h2 class="cta-title">Find Your Next 350 kW Charging Station</h2>
+            <p class="cta-desc">
+              Locate open stalls in real time or join Driver Plus to start saving on every kilowatt-hour.
+            </p>
+            <div class="cta-btn-group">
+              <a href="find-charger.html" class="cta-primary-btn">
+                <span>Explore Network Map</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" class="btn-icon" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="login.html" class="cta-secondary-btn">
+                <span>Driver Login / Register</span>
+              </a>
+            </div>
+            <div class="cta-store-badges">
+              <span class="store-badge-pill">24/7 Roadside Hotline</span>
+              <span class="store-badge-pill">Zero Wait Times</span>
+              <span class="store-badge-pill">Guaranteed 350 kW Power</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 4. Shared Footer Architecture -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-main-grid">
+        <!-- Col 1: Brand Info & Status -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand-link">
+            <img src="assets/images/logo.png" alt="VoltPulse EV Network Logo" class="footer-logo-img">
+            <div class="footer-brand-meta">
+              <span class="footer-brand-name"><span>Volt</span>Pulse</span>
+              <span class="footer-brand-tagline">EV Charging Network</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Empowering the transition to zero-emission mobility with high-speed DC fast charging networks, intelligent
+            grid balancing, and seamless driver access nationwide.
+          </p>
+          <div class="footer-status-pill">
+            <span class="status-dot"></span>
+            All Network Stations Operational
+          </div>
+          <!-- Social Media Channels -->
+          <div class="footer-social-links" aria-label="Official Social Channels">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="X (formerly Twitter)">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.82 0-1.666.28-1.897.905-.14.378-.209.897-.209 1.554v1.526h3.909l-.517 3.667h-3.392v7.98h-4.896z"/>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Network Navigation -->
+        <div>
+          <h2 class="footer-col-title">Network</h2>
+          <ul class="footer-links-list">
+            <li><a href="find-charger.html" class="footer-link">Find a Charger Map</a></li>
+            <li><a href="pricing.html" class="footer-link">Tariffs & Subscriptions</a></li>
+            <li><a href="home-2.html" class="footer-link">Fleet Depot Solutions</a></li>
+            <li><a href="about.html" class="footer-link">Green Energy Grid</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Drivers & Support -->
+        <div>
+          <h2 class="footer-col-title">Driver Hub</h2>
+          <ul class="footer-links-list">
+            <li><a href="dashboard.html" class="footer-link">Driver Dashboard & RFID Sync</a></li>
+            <li><a href="dashboard.html" class="footer-link">Session History & Receipts</a></li>
+            <li><a href="about.html" class="footer-link">About VoltPulse</a></li>
+            <li><a href="contact.html" class="footer-link">24/7 Driver Roadside Help</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Dispatch Updates -->
+        <div>
+          <h2 class="footer-col-title">Station Alerts</h2>
+          <div class="footer-newsletter-box">
+            <p class="footer-newsletter-text">
+              Subscribe to newly commissioned ultra-fast charging corridors and off-peak tariff updates.
+            </p>
+            <form class="footer-form" id="station-alert-form">
+              <input type="email" placeholder="driver@domain.com" required class="footer-input"
+                aria-label="Email address for station updates">
+              <button type="submit" class="footer-submit-btn">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 VoltPulse EV Network Operator Inc. All rights reserved.
+        </div>
+        <ul class="footer-legal-links">
+          <li><a href="about.html">Privacy Policy</a></li>
+          <li><a href="about.html">Terms of Service</a></li>
+          <li><a href="about.html">Grid Security</a></li>
+          <li><a href="contact.html">Support</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 5. Scroll-To-Top Button -->
+  <button type="button" id="scroll-to-top" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

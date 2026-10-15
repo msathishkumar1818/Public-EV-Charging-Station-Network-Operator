@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Login & Driver Registration | VoltPulse EV Charging Network</title>
+  <meta name="description"
+    content="Sign in or register for a VoltPulse driver account to locate 350 kW ultra-fast charging hubs, initiate live charging sessions, and manage fleet billing.">
+  <link rel="icon" type="image/png" href="assets/images/icons/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="auth-body">
+
+  <div class="auth-page-wrapper">
+
+    <!-- =========================================================
+         LEFT SIDE: LUXURY BRANDING & VEHICLE HERO PANEL
+         ========================================================= -->
+    <aside class="auth-visual-panel" aria-label="VoltPulse Fleet Information">
+      <!-- Top Brand Header -->
+      <div class="auth-brand-header">
+        <a href="index.html" class="auth-brand-link" aria-label="Return to VoltPulse Home">
+          <img src="assets/images/logo.png" alt="VoltPulse EV Network Logo" class="auth-brand-logo">
+          <div class="auth-brand-meta">
+            <span class="auth-brand-name"><span>Volt</span>Pulse</span>
+            <span class="auth-brand-tagline">EV Charging Network</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Center Visual & Hero Content -->
+      <div class="auth-visual-center">
+        <!-- Sleek EV Fast Charging Vehicle Vector Graphic -->
+        <svg class="auth-car-illustration" viewBox="0 0 540 220" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+          <defs>
+            <linearGradient id="evBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#22c55e" stop-opacity="0.85" />
+              <stop offset="50%" stop-color="#16a34a" stop-opacity="0.65" />
+              <stop offset="100%" stop-color="#052e16" stop-opacity="0.95" />
+            </linearGradient>
+            <linearGradient id="neonGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#38bdf8" />
+              <stop offset="50%" stop-color="#22c55e" />
+              <stop offset="100%" stop-color="#4ade80" />
+            </linearGradient>
+            <filter id="electricGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="8" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <radialGradient id="wheelGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#22c55e" stop-opacity="0.6" />
+              <stop offset="100%" stop-color="#22c55e" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+
+          <!-- Ambient Ground Glow & Road -->
+          <ellipse cx="270" cy="195" rx="230" ry="12" fill="url(#wheelGlow)" />
+          <path d="M40 195 L500 195" stroke="#22c55e" stroke-width="2" stroke-opacity="0.35" stroke-dasharray="8 8" />
+
+          <!-- Charging Cable & Station Plug (Left) -->
+          <path d="M30 140 Q 60 210, 140 155" fill="none" stroke="url(#neonGlowGrad)" stroke-width="3" stroke-linecap="round" />
+          <circle cx="140" cy="155" r="5" fill="#38bdf8" filter="url(#electricGlow)" />
+          <path d="M15 110 L30 110 L30 180 L15 180 Z" fill="#0f172a" stroke="#22c55e" stroke-width="2" />
+          <circle cx="22.5" cy="130" r="4" fill="#22c55e" filter="url(#electricGlow)" />
+
+          <!-- EV Vehicle Silhouette & Aerodynamic Body -->
+          <path
+            d="M95 160 C 105 140, 130 120, 175 112 L 235 90 C 275 75, 360 75, 410 105 L 475 135 C 505 145, 515 155, 510 170 C 500 176, 480 176, 455 176 C 450 152, 428 135, 402 135 C 376 135, 354 152, 349 176 L 211 176 C 206 152, 184 135, 158 135 C 132 135, 110 152, 105 176 C 92 176, 85 172, 95 160 Z"
+            fill="url(#evBodyGrad)" stroke="#22c55e" stroke-width="2.5" />
+
+          <!-- Sleek Roofline & Aerodynamic Glass Windows -->
+          <path d="M230 96 L 310 84 C 350 84, 385 96, 412 118 L 335 118 L 230 118 Z" fill="#030712" stroke="#38bdf8"
+            stroke-width="1.8" fill-opacity="0.85" />
+          <path d="M220 98 L 175 118 L 220 118 Z" fill="#030712" stroke="#38bdf8" stroke-width="1.8"
+            fill-opacity="0.85" />
+
+          <!-- Streamlined Accent Neon Lines -->
+          <path d="M125 150 Q 230 135, 480 150" fill="none" stroke="url(#neonGlowGrad)" stroke-width="2"
+            filter="url(#electricGlow)" />
+          <path d="M470 142 L 500 150" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"
+            filter="url(#electricGlow)" />
+
+          <!-- Front Headlight LED Glow -->
+          <polygon points="485,148 515,152 495,158" fill="#38bdf8" filter="url(#electricGlow)" />
+
+          <!-- Rear Taillight LED Lightbar -->
+          <line x1="95" y1="152" x2="115" y2="152" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round"
+            filter="url(#electricGlow)" />
+
+          <!-- Wheel 1: Front (Right) -->
+          <g transform="translate(402, 176)">
+            <circle cx="0" cy="0" r="28" fill="#020617" stroke="#334155" stroke-width="5" />
+            <circle cx="0" cy="0" r="21" fill="#0f172a" stroke="#22c55e" stroke-width="2" />
+            <circle cx="0" cy="0" r="9" fill="#22c55e" />
+            <line x1="-18" y1="0" x2="18" y2="0" stroke="#38bdf8" stroke-width="2" />
+            <line x1="0" y1="-18" x2="0" y2="18" stroke="#38bdf8" stroke-width="2" />
+          </g>
+
+          <!-- Wheel 2: Rear (Left) -->
+          <g transform="translate(158, 176)">
+            <circle cx="0" cy="0" r="28" fill="#020617" stroke="#334155" stroke-width="5" />
+            <circle cx="0" cy="0" r="21" fill="#0f172a" stroke="#22c55e" stroke-width="2" />
+            <circle cx="0" cy="0" r="9" fill="#22c55e" />
+            <line x1="-18" y1="0" x2="18" y2="0" stroke="#38bdf8" stroke-width="2" />
+            <line x1="0" y1="-18" x2="0" y2="18" stroke="#38bdf8" stroke-width="2" />
+          </g>
+        </svg>
+
+        <h2 class="auth-hero-heading">Welcome to VoltPulse Fleet</h2>
+        <p class="auth-hero-desc">
+          Sign in or register to locate 350 kW ultra-fast charging hubs, track real-time kWh telemetry, and manage
+          nationwide fleet billing seamlessly.
+        </p>
+
+        <!-- Feature Highlights -->
+        <div class="auth-hero-pills">
+          <span class="auth-hero-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            350 kW DC Fast Charging
+          </span>
+          <span class="auth-hero-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            Nationwide Hubs
+          </span>
+          <span class="auth-hero-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+            Automated Billing
+          </span>
+        </div>
+      </div>
+
+      <!-- Bottom Trust Badge & Back Link -->
+      <div class="auth-visual-footer">
+        <div class="auth-trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span>100% Encrypted & ISO 15118 Plug & Charge Certified</span>
+        </div>
+        <a href="index.html" class="auth-back-link">&larr; Return to Home</a>
+      </div>
+    </aside>
+
+    <!-- =========================================================
+         RIGHT SIDE: AUTHENTICATION CONTAINER (SIGN IN / REGISTER)
+         ========================================================= -->
+    <main class="auth-form-panel">
+      <div class="auth-form-container">
+
+        <!-- Top Controls: Mobile Brand Logo + Theme/RTL Switchers -->
+        <div class="auth-top-controls">
+          <a href="index.html" class="auth-mobile-brand" aria-label="VoltPulse Home">
+            <img src="assets/images/logo.png" alt="VoltPulse Network Logo" style="width: 34px; height: 34px;">
+            <span class="brand-name" style="font-size: 1.15rem;"><span>Volt</span>Pulse</span>
+          </a>
+
+          <div class="auth-top-actions">
+            <!-- RTL Toggle -->
+            <button type="button" class="icon-control-btn rtl-toggle-btn" aria-label="Switch text direction">
+              <span class="rtl-text-indicator">RTL</span>
+            </button>
+
+            <!-- Dark Mode Toggle -->
+            <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle color theme">
+              <svg class="theme-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="theme-sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Segmented Pill Tab Switcher: SIGN IN | REGISTER -->
+        <div class="auth-tab-wrapper" role="tablist" aria-label="Authentication Options">
+          <button type="button" class="auth-tab-btn active" id="tab-sign-in" role="tab" aria-selected="true"
+            aria-controls="panel-sign-in">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+            <span>SIGN IN</span>
+          </button>
+          <button type="button" class="auth-tab-btn" id="tab-register" role="tab" aria-selected="false"
+            aria-controls="panel-register">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <line x1="20" y1="8" x2="20" y2="14"></line>
+              <line x1="23" y1="11" x2="17" y2="11"></line>
+            </svg>
+            <span>REGISTER</span>
+          </button>
+        </div>
+
+        <!-- Interactive Success / Feedback Alert Banner -->
+        <div class="auth-alert-banner" id="auth-alert-banner" role="alert" aria-live="polite">
+          <svg class="auth-alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span class="auth-alert-text" id="auth-alert-text">
+            Account authenticated successfully! Redirecting to your fleet dashboard...
+          </span>
+        </div>
+
+        <!-- Header Category Pill & Title -->
+        <div class="auth-category-pill" id="auth-category-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round" style="width: 13px; height: 13px;" aria-hidden="true">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <span id="auth-pill-text">ACCOUNT SIGN IN</span>
+        </div>
+
+        <h1 class="auth-title" id="auth-main-title">CUSTOMER LOGIN</h1>
+        <p class="auth-subtitle" id="auth-main-subtitle">
+          Enter your email and password to access your fleet dashboard.
+        </p>
+
+        <!-- =========================================================
+             FORM 1: SIGN IN FORM
+             ========================================================= -->
+        <form class="auth-form" id="sign-in-form" novalidate>
+          <!-- Email Field -->
+          <div class="auth-field-group">
+            <div class="auth-label-row">
+              <label for="signin-email" class="auth-label">Email Address</label>
+            </div>
+            <div class="auth-input-wrapper">
+              <input type="email" id="signin-email" name="email" placeholder="name@example.com" required
+                class="auth-input" autocomplete="email">
+            </div>
+          </div>
+
+          <!-- Password Field with Forgot Link and Eye Toggle -->
+          <div class="auth-field-group">
+            <div class="auth-label-row">
+              <label for="signin-password" class="auth-label">Password</label>
+              <a href="#" class="auth-forgot-link" id="forgot-password-link">Forgot Password?</a>
+            </div>
+            <div class="auth-input-wrapper">
+              <input type="password" id="signin-password" name="password" placeholder="••••••••" required
+                class="auth-input" autocomplete="current-password">
+              <button type="button" class="auth-eye-btn" data-target="signin-password" aria-label="Toggle password visibility">
+                <svg class="eye-show" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-hide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+                  <path
+                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                  </path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Remember Me Checkbox -->
+          <label class="auth-checkbox-row">
+            <input type="checkbox" id="signin-remember" class="auth-checkbox">
+            <span class="auth-checkbox-label">Remember my login</span>
+          </label>
+
+          <!-- Primary Sign In Submit Button -->
+          <button type="submit" class="auth-submit-btn" id="signin-submit-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+            <span>SIGN IN TO FLEET</span>
+          </button>
+
+          <!-- Divider -->
+          <div class="auth-divider">
+            <span class="auth-divider-text">OR CONTINUE WITH</span>
+          </div>
+
+          <!-- Social Buttons -->
+          <div class="auth-social-group">
+            <button type="button" class="auth-social-btn" id="google-login-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  fill="#4285F4" />
+                <path
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                  fill="#34A853" />
+                <path
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
+                  fill="#FBBC05" />
+                <path
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
+                  fill="#EA4335" />
+              </svg>
+              <span>Continue with Google</span>
+            </button>
+            <button type="button" class="auth-social-btn" id="rfid-login-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                <line x1="2" y1="10" x2="22" y2="10"></line>
+              </svg>
+              <span>Continue with RFID Keyfob / Smartcard</span>
+            </button>
+          </div>
+
+          <!-- Bottom Switch to Register -->
+          <div class="auth-switch-prompt">
+            Don't have an account?
+            <a href="#" class="auth-switch-link" id="link-to-register">Register here</a>
+          </div>
+        </form>
+
+        <!-- =========================================================
+             FORM 2: REGISTRATION FORM
+             ========================================================= -->
+        <form class="auth-form hidden" id="register-form" novalidate>
+          <!-- Row 1: Full Name & Driver Email (2-Column Grid) -->
+          <div class="auth-row-grid">
+            <div class="auth-field-group">
+              <div class="auth-label-row">
+                <label for="reg-name" class="auth-label">Full Name</label>
+              </div>
+              <div class="auth-input-wrapper">
+                <input type="text" id="reg-name" name="name" placeholder="Johnathan Vance" required class="auth-input"
+                  autocomplete="name">
+              </div>
+            </div>
+
+            <div class="auth-field-group">
+              <div class="auth-label-row">
+                <label for="reg-email" class="auth-label">Driver / Fleet Email</label>
+              </div>
+              <div class="auth-input-wrapper">
+                <input type="email" id="reg-email" name="email" placeholder="driver@volt-fleet.com" required
+                  class="auth-input" autocomplete="email">
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Vehicle Model / Fleet ID -->
+          <div class="auth-field-group">
+            <div class="auth-label-row">
+              <label for="reg-vehicle" class="auth-label">Vehicle Model / Fleet ID</label>
+            </div>
+            <div class="auth-input-wrapper">
+              <input type="text" id="reg-vehicle" name="vehicle" placeholder="Tesla Model Y / Fleet ID #490"
+                class="auth-input">
+            </div>
+          </div>
+
+          <!-- Row 3: Password & Confirm Password (2-Column Grid) -->
+          <div class="auth-row-grid">
+            <div class="auth-field-group">
+              <div class="auth-label-row">
+                <label for="reg-password" class="auth-label">Create Password</label>
+              </div>
+              <div class="auth-input-wrapper">
+                <input type="password" id="reg-password" name="password" placeholder="••••••••" required class="auth-input"
+                  autocomplete="new-password">
+                <button type="button" class="auth-eye-btn" data-target="reg-password" aria-label="Toggle password visibility">
+                  <svg class="eye-show" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <svg class="eye-hide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+                    <path
+                      d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                    </path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="auth-field-group">
+              <div class="auth-label-row">
+                <label for="reg-confirm-password" class="auth-label">Confirm Password</label>
+              </div>
+              <div class="auth-input-wrapper">
+                <input type="password" id="reg-confirm-password" name="confirm-password" placeholder="••••••••" required
+                  class="auth-input" autocomplete="new-password">
+                <button type="button" class="auth-eye-btn" data-target="reg-confirm-password"
+                  aria-label="Toggle password visibility">
+                  <svg class="eye-show" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <svg class="eye-hide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+                    <path
+                      d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                    </path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Terms & Policy Checkbox -->
+          <label class="auth-checkbox-row">
+            <input type="checkbox" id="reg-terms" required class="auth-checkbox">
+            <span class="auth-checkbox-label">
+              I agree to VoltPulse <a href="about.html" target="_blank">Terms</a> & <a href="about.html"
+                target="_blank">Privacy Policy</a>
+            </span>
+          </label>
+
+          <!-- Primary Register Submit Button -->
+          <button type="submit" class="auth-submit-btn" id="register-submit-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <line x1="20" y1="8" x2="20" y2="14"></line>
+              <line x1="23" y1="11" x2="17" y2="11"></line>
+            </svg>
+            <span>CREATE DRIVER ACCOUNT</span>
+          </button>
+
+          <!-- Divider -->
+          <div class="auth-divider">
+            <span class="auth-divider-text">OR REGISTER WITH</span>
+          </div>
+
+          <!-- Social Buttons -->
+          <div class="auth-social-group">
+            <button type="button" class="auth-social-btn" id="google-reg-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  fill="#4285F4" />
+                <path
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                  fill="#34A853" />
+                <path
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
+                  fill="#FBBC05" />
+                <path
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
+                  fill="#EA4335" />
+              </svg>
+              <span>Sign up with Google</span>
+            </button>
+          </div>
+
+          <!-- Bottom Switch to Sign In -->
+          <div class="auth-switch-prompt">
+            Already have an account?
+            <a href="#" class="auth-switch-link" id="link-to-signin">Sign In here</a>
+          </div>
+        </form>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Shared Global JS (handles Theme & RTL) -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Interactive Auth Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabSignIn = document.getElementById('tab-sign-in');
+      const tabRegister = document.getElementById('tab-register');
+      const signInForm = document.getElementById('sign-in-form');
+      const registerForm = document.getElementById('register-form');
+      const pillText = document.getElementById('auth-pill-text');
+      const mainTitle = document.getElementById('auth-main-title');
+      const mainSubtitle = document.getElementById('auth-main-subtitle');
+      const alertBanner = document.getElementById('auth-alert-banner');
+      const alertText = document.getElementById('auth-alert-text');
+      const linkToRegister = document.getElementById('link-to-register');
+      const linkToSignIn = document.getElementById('link-to-signin');
+
+      // Switch to Register Tab
+      function activateRegisterTab() {
+        tabRegister.classList.add('active');
+        tabRegister.setAttribute('aria-selected', 'true');
+        tabSignIn.classList.remove('active');
+        tabSignIn.setAttribute('aria-selected', 'false');
+
+        signInForm.classList.add('hidden');
+        registerForm.classList.remove('hidden');
+
+        pillText.textContent = 'DRIVER & FLEET REGISTRATION';
+        mainTitle.textContent = 'CREATE DRIVER ACCOUNT';
+        mainSubtitle.textContent = 'Join VoltPulse for automated Plug & Charge network access.';
+
+        alertBanner.classList.remove('active');
+      }
+
+      // Switch to Sign In Tab
+      function activateSignInTab() {
+        tabSignIn.classList.add('active');
+        tabSignIn.setAttribute('aria-selected', 'true');
+        tabRegister.classList.remove('active');
+        tabRegister.setAttribute('aria-selected', 'false');
+
+        registerForm.classList.add('hidden');
+        signInForm.classList.remove('hidden');
+
+        pillText.textContent = 'ACCOUNT SIGN IN';
+        mainTitle.textContent = 'CUSTOMER LOGIN';
+        mainSubtitle.textContent = 'Enter your email and password to access your fleet dashboard.';
+
+        alertBanner.classList.remove('active');
+      }
+
+      tabRegister.addEventListener('click', activateRegisterTab);
+      tabSignIn.addEventListener('click', activateSignInTab);
+      if (linkToRegister) linkToRegister.addEventListener('click', (e) => { e.preventDefault(); activateRegisterTab(); });
+      if (linkToSignIn) linkToSignIn.addEventListener('click', (e) => { e.preventDefault(); activateSignInTab(); });
+
+      // Password Show/Hide Toggle
+      const eyeButtons = document.querySelectorAll('.auth-eye-btn');
+      eyeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          const input = document.getElementById(targetId);
+          if (!input) return;
+
+          const showIcon = btn.querySelector('.eye-show');
+          const hideIcon = btn.querySelector('.eye-hide');
+
+          if (input.type === 'password') {
+            input.type = 'text';
+            if (showIcon) showIcon.style.display = 'none';
+            if (hideIcon) hideIcon.style.display = 'block';
+            btn.setAttribute('aria-label', 'Hide password');
+          } else {
+            input.type = 'password';
+            if (showIcon) showIcon.style.display = 'block';
+            if (hideIcon) hideIcon.style.display = 'none';
+            btn.setAttribute('aria-label', 'Show password');
+          }
+        });
+      });
+
+      // Sign In Form Submission
+      signInForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('signin-email').value;
+        const password = document.getElementById('signin-password').value;
+
+        if (!email || !password) {
+          alertText.textContent = 'Please fill in both email and password.';
+          alertBanner.classList.add('active');
+          return;
+        }
+
+        const submitBtn = document.getElementById('signin-submit-btn');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>AUTHENTICATING...</span>';
+
+        alertText.textContent = 'Account authenticated successfully! Redirecting to your fleet dashboard...';
+        alertBanner.classList.add('active');
+
+        setTimeout(() => {
+          window.location.href = 'dashboard.html';
+        }, 1200);
+      });
+
+      // Register Form Submission
+      registerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('reg-name').value;
+        const email = document.getElementById('reg-email').value;
+        const pass = document.getElementById('reg-password').value;
+        const confirmPass = document.getElementById('reg-confirm-password').value;
+        const terms = document.getElementById('reg-terms').checked;
+
+        if (!name || !email || !pass || !confirmPass) {
+          alertText.textContent = 'Please fill in all required registration fields.';
+          alertBanner.classList.add('active');
+          return;
+        }
+
+        if (pass !== confirmPass) {
+          alertText.textContent = 'Passwords do not match. Please re-enter.';
+          alertBanner.classList.add('active');
+          return;
+        }
+
+        if (!terms) {
+          alertText.textContent = 'You must agree to the Terms of Service to create an account.';
+          alertBanner.classList.add('active');
+          return;
+        }
+
+        const submitBtn = document.getElementById('register-submit-btn');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>CREATING ACCOUNT...</span>';
+
+        alertText.textContent = 'Account created successfully! Redirecting to your fleet dashboard...';
+        alertBanner.classList.add('active');
+
+        setTimeout(() => {
+          window.location.href = 'dashboard.html';
+        }, 1200);
+      });
+
+      // Social Auth Buttons simulation
+      const socialButtons = document.querySelectorAll('.auth-social-btn');
+      socialButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          alertText.textContent = 'Connecting with single sign-on provider... Redirecting to dashboard.';
+          alertBanner.classList.add('active');
+          setTimeout(() => {
+            window.location.href = 'dashboard.html';
+          }, 1000);
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

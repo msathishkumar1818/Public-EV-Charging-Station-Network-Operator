@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing & Tariffs | VoltPulse Public EV Charging Network</title>
+  <meta name="description"
+    content="Transparent kilowatt-hour charging tariffs. Pay-as-you-go contactless rates or Driver Plus memberships with discounted rates and zero hidden surcharges.">
+  <link rel="icon" type="image/png" href="assets/images/icons/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- 1. Global Branded Loader -->
+  <div id="global-loader" role="status" aria-label="Loading VoltPulse Network">
+    <div class="loader-brand-wrapper">
+      <div class="loader-ring"></div>
+      <img src="assets/images/logo.png" alt="VoltPulse Brand Logo" class="loader-logo-img">
+    </div>
+    <div class="loader-text">
+      <span>Volt</span>Pulse EV Network
+    </div>
+  </div>
+
+  <!-- 2. Global Fixed Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <!-- Logo + Brand -->
+      <a href="index.html" class="brand-link" aria-label="VoltPulse EV Network Home">
+        <img src="assets/images/logo.png" alt="VoltPulse EV Network Logo" class="brand-logo-img">
+        <div class="brand-meta">
+          <span class="brand-name"><span>Volt</span>Pulse</span>
+          <span class="brand-tagline">EV Charging Network</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation: Exactly 6 Nav Items in 1 Line -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <!-- 1. Home Dropdown (Click Only) -->
+        <div class="nav-dropdown-wrapper">
+          <button type="button" class="dropdown-toggle-btn" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="index.html" class="dropdown-item-link">Home 1 (Highway & Metro)</a></li>
+            <li><a href="home-2.html" class="dropdown-item-link">Home 2 (Fleet & Commercial)</a></li>
+          </ul>
+        </div>
+
+        <!-- 2. Find Charger -->
+        <a href="find-charger.html" class="nav-link">Find Charger</a>
+
+        <!-- 3. Pricing (Active) -->
+        <a href="pricing.html" class="nav-link active">Pricing</a>
+
+        <!-- 4. About (Mandatory) -->
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- 5. Contact -->
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <!-- 6. Dashboard (Next to Contact) -->
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <!-- Desktop Header Controls: RTL/LTR + Dark Mode + Login Button -->
+      <div class="header-actions">
+        <!-- RTL Toggle -->
+        <button type="button" class="icon-control-btn rtl-toggle-btn" aria-label="Switch text direction">
+          <span class="rtl-text-indicator">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle color theme">
+          <svg class="theme-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Login Button -->
+        <a href="login.html" class="header-login-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Driver Login</span>
+        </a>
+
+        <!-- Header Primary CTA Button -->
+        <a href="find-charger.html" class="header-cta-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <span>Find Charger</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-open-btn" aria-label="Open mobile navigation menu"
+          aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Mobile Navigation Drawer & Backdrop -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand-link">
+        <img src="assets/images/logo.png" alt="VoltPulse EV Network Logo" class="brand-logo-img">
+        <div class="brand-meta">
+          <span class="brand-name"><span>Volt</span>Pulse</span>
+          <span class="brand-tagline">EV Charging Network</span>
+        </div>
+      </div>
+      <button type="button" class="drawer-close-btn" id="mobile-menu-close-btn"
+        aria-label="Close mobile navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" style="width: 20px; height: 20px;" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="mobile-nav-list">
+        <!-- Home Accordion -->
+        <li class="mobile-accordion-wrapper">
+          <button type="button" class="mobile-accordion-toggle" aria-expanded="false">
+            <span>Home Variations</span>
+            <svg class="dropdown-icon accordion-icon" viewBox="0 0 20 20" fill="currentColor"
+              style="width: 16px; height: 16px;" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <ul class="mobile-accordion-content">
+            <li><a href="index.html" class="mobile-sub-link">Home 1 (Highway & Metro)</a></li>
+            <li><a href="home-2.html" class="mobile-sub-link">Home 2 (Fleet & Commercial)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="find-charger.html" class="mobile-nav-link">Find Charger</a></li>
+        <li><a href="pricing.html" class="mobile-nav-link active">Pricing</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        <li><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      </ul>
+
+      <div class="drawer-actions">
+        <div class="mobile-controls-row">
+          <!-- RTL Control -->
+          <button type="button" class="mobile-control-item rtl-toggle-btn" aria-label="Toggle text direction">
+            <span class="rtl-text-indicator">RTL</span>
+            <span>Direction</span>
+          </button>
+
+          <!-- Theme Control -->
+          <button type="button" class="mobile-control-item theme-toggle-btn" aria-label="Toggle dark mode">
+            <svg class="theme-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px;" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="theme-sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; display: none;"
+              aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+            </svg>
+            <span>Theme</span>
+          </button>
+        </div>
+
+        <a href="login.html" class="drawer-login-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" style="width: 18px; height: 18px;" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Driver Login / Register</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT: EXACTLY 5 CONTENT SECTIONS FOR INNER PAGE 02 -->
+  <main id="main-content">
+
+    <!-- =========================================================
+         SECTION 1: HERO TARIFFS BANNER
+         ========================================================= -->
+    <section class="page-inner-hero" id="pricing-hero">
+      <img src="assets/images/sections/p38.jpg" alt="Transparent Kilowatt-Hour EV Charging Rates"
+        class="page-inner-backdrop">
+      <div class="page-inner-overlay" aria-hidden="true"></div>
+      <div class="site-container">
+        <div class="hero-inner-content">
+          <div class="section-eyebrow">Fair & Transparent Rates</div>
+          <h1 class="page-inner-title">
+            Clear Kilowatt-Hour Pricing with <span class="gradient-text">Zero Hidden Fees</span>
+          </h1>
+          <p class="page-inner-desc">
+            Pay strictly for the power you consume. No mandatory subscription, no surge pricing, and no unlock fees.
+          </p>
+
+          <!-- Quick Rate Highlights / Action Pills -->
+          <div class="hero-action-pills">
+            <div class="hero-pill-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" class="pill-icon" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Pay-As-You-Go: <strong>$0.42 / kWh</strong></span>
+            </div>
+            <div class="hero-pill-item highlight">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" class="pill-icon" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Driver Plus: <strong>$0.31 / kWh</strong></span>
+            </div>
+            <div class="hero-pill-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" class="pill-icon" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Zero Idle or Unlock Surcharges</span>
+            </div>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#calculator-section" class="cta-primary-btn">
+              <span>Calculate Your Charge Cost</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" style="width: 16px; height: 16px;" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+            <a href="#plans" class="cta-secondary-btn">
+              <span>View Membership Plans</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 1B: DYNAMIC KWH COST ESTIMATOR
+         ========================================================= -->
+    <section class="network-section pricing-calc-section" id="calculator-section">
+      <div class="site-container">
+        <div class="section-head text-center"
+          style="text-align: center; max-width: 680px; margin: 0 auto 2.25rem auto;">
+          <div class="section-eyebrow">Real-Time Cost Simulator</div>
+          <h2 class="section-title">Dynamic Charging Cost Estimator</h2>
+          <p class="section-subtitle">
+            Slide to your vehicle's battery capacity to compare real-time pay-as-you-go vs Driver Plus member rates.
+          </p>
+        </div>
+
+        <div class="pricing-calc-card centered-calc-card">
+          <div class="calc-slider-box">
+            <div class="calc-slider-header">
+              <span class="calc-slider-label">Charge Amount</span>
+              <span class="calc-kwh-val" id="calc-kwh-display">60 kWh</span>
+            </div>
+            <input type="range" id="calc-kwh-slider" min="20" max="100" step="5" value="60" class="calc-range-input"
+              aria-label="Adjust charging energy amount">
+          </div>
+
+          <div class="calc-comparison-matrix">
+            <!-- Standard Box -->
+            <div class="calc-result-box">
+              <span class="calc-res-title">Pay-As-You</span>
+              <span class="calc-res-price" id="calc-std-price">$25.20</span>
+              <span class="calc-res-unit">$0.42 / kWh flat rate</span>
+            </div>
+
+            <!-- Driver Plus Box -->
+            <div class="calc-result-box highlight">
+              <span class="calc-res-title">Driver Plus</span>
+              <span class="calc-res-price green" id="calc-plus-price">$18.60</span>
+              <span class="calc-res-save" id="calc-savings-price">Save $6.60</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 2: TARIFF PLANS & MEMBERSHIP TIERS
+         ========================================================= -->
+    <section class="network-section" id="plans">
+      <div class="site-container">
+        <div class="section-head">
+          <div class="section-eyebrow">Plans For Every Driver</div>
+          <h2 class="section-title">Transparent Tariff Tiers</h2>
+          <p class="section-subtitle">
+            Choose between frictionless pay-as-you-go charging or high-volume driver subscriptions.
+          </p>
+        </div>
+
+        <div class="pricing-tiers-grid">
+          <!-- Tier 1: Pay-As-You-Go -->
+          <div class="pricing-plan-card">
+            <div class="plan-card-body">
+              <div class="power-level-tag">Casual Commuter</div>
+              <h3 class="process-card-title">Pay-As-You-Go</h3>
+              <div class="plan-rate-display">
+                <span class="plan-rate-val">$0.42</span>
+                <span class="plan-rate-unit">/ kWh</span>
+              </div>
+              <div class="plan-sub-cost">$0 Monthly Fee</div>
+
+              <ul class="plan-perks-list">
+                <li class="plan-perk-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Contactless card & mobile tap</span>
+                </li>
+                <li class="plan-perk-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Access to all 350 kW & 150 kW hubs</span>
+                </li>
+                <li class="plan-perk-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Instant digital receipts & history</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="plan-cta-wrap">
+              <a href="find-charger.html" class="plan-cta-btn secondary">
+                <span>Start Charging</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Tier 2: Driver Plus (Featured) -->
+          <div class="pricing-plan-card featured">
+            <div class="plan-popular-ribbon">Most Popular</div>
+            <div class="plan-card-body">
+              <div class="power-level-tag">Frequent Driver</div>
+              <h3 class="process-card-title">Driver Plus</h3>
+              <div class="plan-rate-display">
+                <span class="plan-rate-val">$0.31</span>
+                <span class="plan-rate-unit">/ kWh</span>
+              </div>
+              <div class="plan-sub-cost">$7.99 / Month &bull; Cancel Anytime</div>
+
+              <ul class="plan-perks-list">
+                <li class="plan-perk-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>26% discount on all charging</span>
+                </li>
+                <li class="plan-perk-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>15-minute advance stall booking</span>
+                </li>
+                <li class="plan-perk-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Free RFID card + AutoCharge support</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="plan-cta-wrap">
+              <a href="login.html" class="plan-cta-btn primary">
+                <span>Join Driver Plus</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Tier 3: Fleet Pro -->
+          <div class="pricing-plan-card">
+            <div class="plan-card-body">
+              <div class="power-level-tag">Commercial Fleet</div>
+              <h3 class="process-card-title">Enterprise Fleet</h3>
+              <div class="plan-rate-display">
+                <span class="plan-rate-val">$0.27</span>
+                <span class="plan-rate-unit">/ kWh</span>
+              </div>
+              <div class="plan-sub-cost">$29.99 / Month &bull; Multi-Vehicle</div>
+
+              <ul class="plan-perks-list">
+                <li class="plan-perk-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Lowest per-kWh commercial rates</span>
+                </li>
+                <li class="plan-perk-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Centralized monthly VAT invoicing</span>
+                </li>
+                <li class="plan-perk-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Multi-driver RFID cards & limits</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="plan-cta-wrap">
+              <a href="contact.html" class="plan-cta-btn secondary">
+                <span>Inquire Fleet Account</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 3: ZERO HIDDEN FEES GUARANTEE
+         ========================================================= -->
+    <section class="network-section" id="transparency">
+      <div class="site-container">
+        <div class="section-head">
+          <div class="section-eyebrow">Our Customer Promise</div>
+          <h2 class="section-title">Zero Hidden Fees Guarantee</h2>
+          <p class="section-subtitle">
+            We believe in honest, predictable EV charging costs with no surprise penalties.
+          </p>
+        </div>
+
+        <div class="transparency-quad-grid">
+          <!-- Card 1 -->
+          <div class="transparency-card">
+            <div>
+              <div class="transparency-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h3 class="transparency-title">No Session Fees</h3>
+              <p class="transparency-desc">
+                We never charge an unlock, connection, or plugging fee. You only pay for exact kWh delivered.
+              </p>
+            </div>
+            <div class="transparency-badge">$0 Connection Surcharge</div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="transparency-card">
+            <div>
+              <div class="transparency-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h3 class="transparency-title">Off-Peak Rates</h3>
+              <p class="transparency-desc">
+                Enjoy automated overnight discount tariffs between 10 PM and 6 AM across all city fast hubs.
+              </p>
+            </div>
+            <div class="transparency-badge">Automatic Night Savings</div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="transparency-card">
+            <div>
+              <div class="transparency-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h3 class="transparency-title">10-Min Grace Period</h3>
+              <p class="transparency-desc">
+                Take your time unplugging after your vehicle reaches 100%. Generous grace period before idle fees.
+              </p>
+            </div>
+            <div class="transparency-badge">Fair Dwell Policy</div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="transparency-card">
+            <div>
+              <div class="transparency-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+              </div>
+              <h3 class="transparency-title">Itemized Invoices</h3>
+              <p class="transparency-desc">
+                Instant digital VAT invoice detailing taxes, peak rates, and energy telemetry delivered by email.
+              </p>
+            </div>
+            <div class="transparency-badge">Tax-Compliant PDF</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 4: PAYMENT METHODS & RFID KEYFOB SYNC
+         ========================================================= -->
+    <section class="network-section" id="payment-gateways">
+      <div class="site-container">
+        <div class="payment-methods-grid">
+          <!-- Visual Column -->
+          <div class="payment-visual-card">
+            <img src="assets/images/sections/p31.jpg" alt="Driver tapping contactless payment card at charging plaza"
+              class="payment-visual-img">
+          </div>
+
+          <!-- Options Column -->
+          <div class="payment-options-column">
+            <div class="section-eyebrow">Universal Payment</div>
+            <h2 class="section-title">Seamless Payment Flexibility</h2>
+            <p class="section-subtitle">
+              Charge effortlessly without being locked into proprietary walled gardens. Use your preferred digital
+              payment or physical keyfob.
+            </p>
+
+            <div class="gateways-chip-list">
+              <span class="gateway-chip">Apple Pay</span>
+              <span class="gateway-chip">Google Pay</span>
+              <span class="gateway-chip">Visa & Mastercard</span>
+              <span class="gateway-chip">American Express</span>
+              <span class="gateway-chip">VoltPulse RFID Fob</span>
+              <span class="gateway-chip">Plug & Charge (ISO 15118)</span>
+            </div>
+
+            <div style="margin-top: 1rem;">
+              <a href="login.html" class="cta-primary-btn">
+                <span>Configure Wallet in Driver Portal</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" style="width: 16px; height: 16px;" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 5: PRICING CTA BANNER
+         (Mandatory Final Section)
+         ========================================================= -->
+    <section class="network-section" id="pricing-cta">
+      <div class="site-container">
+        <div class="cta-banner-wrapper">
+          <img src="assets/images/sections/p32.jpg" alt="Modern electric vehicle charging at highway hub"
+            class="cta-backdrop-img">
+          <div class="cta-content-box">
+            <div class="section-eyebrow">Join Driver Plus Today</div>
+            <h2 class="cta-title">Start Saving on Every Single Kilowatt-Hour</h2>
+            <p class="cta-desc">
+              Experience the lowest fast-charging rates nationwide with free RFID card delivery, advance stall
+              reservations, and priority customer care.
+            </p>
+            <div class="cta-btn-group">
+              <a href="login.html" class="cta-primary-btn">
+                <span>Join Driver Plus ($7.99/mo)</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" style="width: 18px; height: 18px;" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="find-charger.html" class="cta-secondary-btn">
+                <span>Explore Network Map</span>
+              </a>
+            </div>
+            <div class="cta-store-badges">
+              <span class="store-badge-pill">30-Day Money Back Guarantee</span>
+              <span class="store-badge-pill">Cancel Anytime in 1 Tap</span>
+              <span class="store-badge-pill">No Minimum Commitment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 4. Shared Footer Architecture -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-main-grid">
+        <!-- Col 1: Brand Info & Status -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand-link">
+            <img src="assets/images/logo.png" alt="VoltPulse EV Network Logo" class="footer-logo-img">
+            <div class="footer-brand-meta">
+              <span class="footer-brand-name"><span>Volt</span>Pulse</span>
+              <span class="footer-brand-tagline">EV Charging Network</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Empowering the transition to zero-emission mobility with high-speed DC fast charging networks, intelligent
+            grid balancing, and seamless driver access nationwide.
+          </p>
+          <div class="footer-status-pill">
+            <span class="status-dot"></span>
+            All Network Stations Operational
+          </div>
+          <!-- Social Media Channels -->
+          <div class="footer-social-links" aria-label="Official Social Channels">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="X (formerly Twitter)">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.82 0-1.666.28-1.897.905-.14.378-.209.897-.209 1.554v1.526h3.909l-.517 3.667h-3.392v7.98h-4.896z"/>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Network Navigation -->
+        <div>
+          <h2 class="footer-col-title">Network</h2>
+          <ul class="footer-links-list">
+            <li><a href="find-charger.html" class="footer-link">Find a Charger Map</a></li>
+            <li><a href="pricing.html" class="footer-link">Tariffs & Subscriptions</a></li>
+            <li><a href="home-2.html" class="footer-link">Fleet Depot Solutions</a></li>
+            <li><a href="about.html" class="footer-link">Green Energy Grid</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Drivers & Support -->
+        <div>
+          <h2 class="footer-col-title">Driver Hub</h2>
+          <ul class="footer-links-list">
+            <li><a href="dashboard.html" class="footer-link">Driver Dashboard & RFID Sync</a></li>
+            <li><a href="dashboard.html" class="footer-link">Session History & Receipts</a></li>
+            <li><a href="about.html" class="footer-link">About VoltPulse</a></li>
+            <li><a href="contact.html" class="footer-link">24/7 Driver Roadside Help</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Dispatch Updates -->
+        <div>
+          <h2 class="footer-col-title">Station Alerts</h2>
+          <div class="footer-newsletter-box">
+            <p class="footer-newsletter-text">
+              Subscribe to newly commissioned ultra-fast charging corridors and off-peak tariff updates.
+            </p>
+            <form class="footer-form" id="station-alert-form">
+              <input type="email" placeholder="driver@domain.com" required class="footer-input"
+                aria-label="Email address for station updates">
+              <button type="submit" class="footer-submit-btn">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 VoltPulse EV Network Operator Inc. All rights reserved.
+        </div>
+        <ul class="footer-legal-links">
+          <li><a href="about.html">Privacy Policy</a></li>
+          <li><a href="about.html">Terms of Service</a></li>
+          <li><a href="about.html">Grid Security</a></li>
+          <li><a href="contact.html">Support</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 5. Scroll-To-Top Button -->
+  <button type="button" id="scroll-to-top" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

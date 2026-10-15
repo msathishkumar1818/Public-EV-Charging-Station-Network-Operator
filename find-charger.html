@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Charger | VoltPulse EV Charging Station Network</title>
+  <meta name="description"
+    content="Locate nearby 350 kW and 150 kW DC fast charging stations in real time. Check live stall availability, connector types, and plaza amenities.">
+  <link rel="icon" type="image/png" href="assets/images/icons/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- 1. Global Branded Loader -->
+  <div id="global-loader" role="status" aria-label="Loading VoltPulse Network">
+    <div class="loader-brand-wrapper">
+      <div class="loader-ring"></div>
+      <img src="assets/images/logo.png" alt="VoltPulse Brand Logo" class="loader-logo-img">
+    </div>
+    <div class="loader-text">
+      <span>Volt</span>Pulse EV Network
+    </div>
+  </div>
+
+  <!-- 2. Global Fixed Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <!-- Logo + Brand -->
+      <a href="index.html" class="brand-link" aria-label="VoltPulse EV Network Home">
+        <img src="assets/images/logo.png" alt="VoltPulse EV Network Logo" class="brand-logo-img">
+        <div class="brand-meta">
+          <span class="brand-name"><span>Volt</span>Pulse</span>
+          <span class="brand-tagline">EV Charging Network</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation: Exactly 6 Nav Items in 1 Line -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <!-- 1. Home Dropdown (Click Only) -->
+        <div class="nav-dropdown-wrapper">
+          <button type="button" class="dropdown-toggle-btn" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="index.html" class="dropdown-item-link">Home 1 (Highway & Metro)</a></li>
+            <li><a href="home-2.html" class="dropdown-item-link">Home 2 (Fleet & Commercial)</a></li>
+          </ul>
+        </div>
+
+        <!-- 2. Find Charger (Active) -->
+        <a href="find-charger.html" class="nav-link active">Find Charger</a>
+
+        <!-- 3. Pricing -->
+        <a href="pricing.html" class="nav-link">Pricing</a>
+
+        <!-- 4. About (Mandatory) -->
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- 5. Contact -->
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <!-- 6. Dashboard (Next to Contact) -->
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <!-- Desktop Header Controls: RTL/LTR + Dark Mode + Login Button -->
+      <div class="header-actions">
+        <!-- RTL Toggle -->
+        <button type="button" class="icon-control-btn rtl-toggle-btn" aria-label="Switch text direction">
+          <span class="rtl-text-indicator">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle color theme">
+          <svg class="theme-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Login Button -->
+        <a href="login.html" class="header-login-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Driver Login</span>
+        </a>
+
+        <!-- Header Primary CTA Button -->
+        <a href="find-charger.html" class="header-cta-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <span>Find Charger</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-open-btn" aria-label="Open mobile navigation menu"
+          aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Mobile Navigation Drawer & Backdrop -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand-link">
+        <img src="assets/images/logo.png" alt="VoltPulse EV Network Logo" class="brand-logo-img">
+        <div class="brand-meta">
+          <span class="brand-name"><span>Volt</span>Pulse</span>
+          <span class="brand-tagline">EV Charging Network</span>
+        </div>
+      </div>
+      <button type="button" class="drawer-close-btn" id="mobile-menu-close-btn"
+        aria-label="Close mobile navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" style="width: 20px; height: 20px;" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="mobile-nav-list">
+        <!-- Home Accordion -->
+        <li class="mobile-accordion-wrapper">
+          <button type="button" class="mobile-accordion-toggle" aria-expanded="false">
+            <span>Home Variations</span>
+            <svg class="dropdown-icon accordion-icon" viewBox="0 0 20 20" fill="currentColor"
+              style="width: 16px; height: 16px;" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <ul class="mobile-accordion-content">
+            <li><a href="index.html" class="mobile-sub-link">Home 1 (Highway & Metro)</a></li>
+            <li><a href="home-2.html" class="mobile-sub-link">Home 2 (Fleet & Commercial)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="find-charger.html" class="mobile-nav-link active">Find Charger</a></li>
+        <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        <li><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      </ul>
+
+      <div class="drawer-actions">
+        <div class="mobile-controls-row">
+          <!-- RTL Control -->
+          <button type="button" class="mobile-control-item rtl-toggle-btn" aria-label="Toggle text direction">
+            <span class="rtl-text-indicator">RTL</span>
+            <span>Direction</span>
+          </button>
+
+          <!-- Theme Control -->
+          <button type="button" class="mobile-control-item theme-toggle-btn" aria-label="Toggle dark mode">
+            <svg class="theme-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px;" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="theme-sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; display: none;"
+              aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+            </svg>
+            <span>Theme</span>
+          </button>
+        </div>
+
+        <a href="login.html" class="drawer-login-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" style="width: 18px; height: 18px;" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Driver Login / Register</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT: EXACTLY 5 CONTENT SECTIONS FOR INNER PAGE 01 -->
+  <main id="main-content">
+
+    <!-- =========================================================
+         SECTION 1: HERO LOCATOR SEARCH BAR
+         ========================================================= -->
+    <section class="page-inner-hero" id="locator-hero">
+      <img src="assets/images/sections/p37.jpg" alt="VoltPulse Network Station Radar" class="page-inner-backdrop">
+      <div class="page-inner-overlay" aria-hidden="true"></div>
+      <div class="site-container">
+        <div class="hero-inner-content">
+          <div class="section-eyebrow">Real-Time Station Radar</div>
+          <h1 class="page-inner-title">Find Ultra-Fast Charging Near You</h1>
+          <p class="page-inner-desc">
+            Explore 1,450+ high-power charging bays across nationwide corridors with live connector availability.
+          </p>
+
+          <!-- Filter Search Bar -->
+          <div class="finder-search-wrap">
+            <div class="hero-input-wrap">
+              <svg class="hero-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="finder-search-input" class="hero-search-input"
+                placeholder="Type city, corridor name, or street" aria-label="Search station locations">
+            </div>
+          </div>
+
+          <!-- Speed & Plug Filter Chips -->
+          <div class="finder-filter-bar">
+            <button type="button" class="finder-filter-chip active" data-filter="all">All Plazas</button>
+            <button type="button" class="finder-filter-chip" data-filter="350">350 kW Ultra</button>
+            <button type="button" class="finder-filter-chip" data-filter="150">150 kW Rapid</button>
+            <button type="button" class="finder-filter-chip" data-filter="ccs2">CCS2 Plug</button>
+            <button type="button" class="finder-filter-chip" data-filter="nacs">NACS Tesla</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 2: LIVE INTERACTIVE STATION HUB & MAP
+         ========================================================= -->
+    <section class="network-section" id="station-hub">
+      <div class="site-container">
+        <div class="hub-explorer-grid">
+          <!-- Station List Column -->
+          <div class="hub-list-column">
+            <!-- Station 1 -->
+            <div class="hub-station-item active-station" data-type="all 350 ccs2 nacs"
+              data-query="Clearfield Pennsylvania EV Charging Superplaza">
+              <div class="hub-station-top">
+                <div>
+                  <h2 class="hub-station-title">I-80 Continental Superplaza</h2>
+                  <div class="hub-station-address">Exit 124, Clearfield Hub &bull; 0.8 mi away</div>
+                </div>
+                <span class="hub-status-badge avail">6 Stalls Free</span>
+              </div>
+              <div class="hub-station-details">
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Power</span>
+                  <strong class="hub-spec-val">350 kW Fast</strong>
+                </div>
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Plugs</span>
+                  <strong class="hub-spec-val">CCS2 &bull; NACS</strong>
+                </div>
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Lounge</span>
+                  <strong class="hub-spec-val">Open 24/7</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Station 2 -->
+            <div class="hub-station-item" data-type="all 350 ccs2 nacs"
+              data-query="450 West 33rd St Manhattan New York EV Charging">
+              <div class="hub-station-top">
+                <div>
+                  <h2 class="hub-station-title">Metro Midtown Charging Oasis</h2>
+                  <div class="hub-station-address">450 West 33rd St, Manhattan &bull; 2.1 mi away</div>
+                </div>
+                <span class="hub-status-badge avail">4 Stalls Free</span>
+              </div>
+              <div class="hub-station-details">
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Power</span>
+                  <strong class="hub-spec-val">350 kW Fast</strong>
+                </div>
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Plugs</span>
+                  <strong class="hub-spec-val">CCS2 &bull; NACS</strong>
+                </div>
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Amenities</span>
+                  <strong class="hub-spec-val">Coffee Shop</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Station 3 -->
+            <div class="hub-station-item" data-type="all 150 ccs2"
+              data-query="Turnpike Gateway Travel Plaza Milepost 92 New Jersey">
+              <div class="hub-station-top">
+                <div>
+                  <h2 class="hub-station-title">Turnpike Gateway Travel Plaza</h2>
+                  <div class="hub-station-address">Service Area 7B, Milepost 92 &bull; 6.4 mi away</div>
+                </div>
+                <span class="hub-status-badge busy">2 Stalls Free</span>
+              </div>
+              <div class="hub-station-details">
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Power</span>
+                  <strong class="hub-spec-val">150 kW Fast</strong>
+                </div>
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Plugs</span>
+                  <strong class="hub-spec-val">CCS2 &bull; CHAdeMO</strong>
+                </div>
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Amenities</span>
+                  <strong class="hub-spec-val">Restrooms</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Station 4 -->
+            <div class="hub-station-item" data-type="all 350 ccs2 nacs"
+              data-query="Pacific Coast Highway Malibu California EV Charging">
+              <div class="hub-station-top">
+                <div>
+                  <h2 class="hub-station-title">Pacific Coast Highway Hub</h2>
+                  <div class="hub-station-address">PCH Mile marker 44, Malibu &bull; 11.2 mi away</div>
+                </div>
+                <span class="hub-status-badge avail">8 Stalls Free</span>
+              </div>
+              <div class="hub-station-details">
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Power</span>
+                  <strong class="hub-spec-val">350 kW Fast</strong>
+                </div>
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Plugs</span>
+                  <strong class="hub-spec-val">CCS2 &bull; NACS</strong>
+                </div>
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Ocean View</span>
+                  <strong class="hub-spec-val">Yes</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Station 5 -->
+            <div class="hub-station-item" data-type="all 350 ccs2 nacs"
+              data-query="1200 Innovation Way San Jose California Tesla Supercharger">
+              <div class="hub-station-top">
+                <div>
+                  <h2 class="hub-station-title">Silicon Valley Superhub</h2>
+                  <div class="hub-station-address">1200 Innovation Way, San Jose &bull; 4.5 mi away</div>
+                </div>
+                <span class="hub-status-badge avail">10 Stalls Free</span>
+              </div>
+              <div class="hub-station-details">
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Power</span>
+                  <strong class="hub-spec-val">350 kW Fast</strong>
+                </div>
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Plugs</span>
+                  <strong class="hub-spec-val">CCS2 &bull; NACS</strong>
+                </div>
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Lounge</span>
+                  <strong class="hub-spec-val">Work Pods</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Station 6 -->
+            <div class="hub-station-item" data-type="all 150 ccs2 nacs"
+              data-query="Route 9 Junction Framingham Boston EV Charging">
+              <div class="hub-station-top">
+                <div>
+                  <h2 class="hub-station-title">Express Route Corridor</h2>
+                  <div class="hub-station-address">Route 9 Junction, Boston Metro &bull; 8.1 mi away</div>
+                </div>
+                <span class="hub-status-badge avail">5 Stalls Free</span>
+              </div>
+              <div class="hub-station-details">
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Power</span>
+                  <strong class="hub-spec-val">150 kW Fast</strong>
+                </div>
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Plugs</span>
+                  <strong class="hub-spec-val">CCS2 &bull; NACS</strong>
+                </div>
+                <div class="hub-spec-chip">
+                  <span class="hub-spec-label">Market</span>
+                  <strong class="hub-spec-val">24/7 Organic</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Map Visual -->
+          <div class="hub-map-card">
+            <iframe id="hub-live-map-frame" class="hub-live-google-map"
+              title="Live EV Charging Stations Interactive Google Map"
+              src="https://maps.google.com/maps?q=Clearfield+Pennsylvania+EV+Charging+Superplaza&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              loading="lazy" allowfullscreen>
+            </iframe>
+            <div class="map-overlay-card">
+              <div class="map-overlay-title">
+                <span class="map-live-dot"></span> Live Google Map Telemetry
+              </div>
+              <div class="map-overlay-desc">
+                Click any station card to pinpoint its live location. Real-time stall availability synchronized.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 3: STATION AMENITIES & DRIVER COMFORT
+         ========================================================= -->
+    <section class="network-section" id="amenities">
+      <div class="site-container">
+        <div class="section-head">
+          <div class="section-eyebrow">Premium Plazas</div>
+          <h2 class="section-title">Designed For Driver Comfort</h2>
+          <p class="section-subtitle">
+            Every VoltPulse charging plaza is equipped with essential amenities for effortless travel breaks.
+          </p>
+        </div>
+
+        <!-- 4 Amenities in a Line with Compact Content -->
+        <div class="comfort-line-grid">
+          <!-- Card 1: Contactless Pay -->
+          <article class="comfort-line-card">
+            <div class="comfort-line-thumb">
+              <img src="assets/images/sections/p26.jpg" alt="Contactless payment terminal" class="comfort-line-img"
+                loading="lazy">
+              <span class="comfort-line-badge">Instant Pay</span>
+            </div>
+            <div class="comfort-line-body">
+              <div class="comfort-line-meta">Zero Lag &bull; Tap &amp; Go</div>
+              <h3 class="comfort-line-title">Contactless Pay</h3>
+              <p class="comfort-line-desc">Tap credit card, Apple Pay, Google Pay, or RFID pass to start charging
+                instantly.</p>
+              <div class="comfort-line-tag">
+                <span class="status-dot"></span>
+                <span>No App Required</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: 24/7 Security & Light -->
+          <article class="comfort-line-card">
+            <div class="comfort-line-thumb">
+              <img src="assets/images/sections/p27.jpg" alt="Overhead illuminated canopy with security"
+                class="comfort-line-img" loading="lazy">
+              <span class="comfort-line-badge">Safety First</span>
+            </div>
+            <div class="comfort-line-body">
+              <div class="comfort-line-meta">24/7 CCTV &bull; Monitored</div>
+              <h3 class="comfort-line-title">24/7 Security &amp; Canopy</h3>
+              <p class="comfort-line-desc">Bright architectural LED canopies and emergency intercoms for safe night
+                charging.</p>
+              <div class="comfort-line-tag">
+                <span class="status-dot"></span>
+                <span>Always Well-Lit</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Lounges & Dining -->
+          <article class="comfort-line-card">
+            <div class="comfort-line-thumb">
+              <img src="assets/images/sections/p28.jpg" alt="Artisan café and lounge at VoltPulse charging plaza"
+                class="comfort-line-img" loading="lazy">
+              <span class="comfort-line-badge">Hospitality</span>
+            </div>
+            <div class="comfort-line-body">
+              <div class="comfort-line-meta">Relax &bull; Recharge</div>
+              <h3 class="comfort-line-title">Lounges &amp; Dining</h3>
+              <p class="comfort-line-desc">Temperature-controlled suites with specialty coffee and clean restrooms.</p>
+              <div class="comfort-line-tag">
+                <span class="status-dot"></span>
+                <span>24/7 Plaza Access</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Gigabit Wi-Fi & Workspaces -->
+          <article class="comfort-line-card">
+            <div class="comfort-line-thumb">
+              <img src="assets/images/sections/p29.jpg" alt="Modern gigabit workspace pod" class="comfort-line-img"
+                loading="lazy">
+              <span class="comfort-line-badge">Ultra Fiber</span>
+            </div>
+            <div class="comfort-line-body">
+              <div class="comfort-line-meta">1000 Mbps &bull; Quiet Pods</div>
+              <h3 class="comfort-line-title">Gigabit Wi-Fi &amp; Work</h3>
+              <p class="comfort-line-desc">Free ultra-fast wireless fiber and quiet pods for seamless productivity.</p>
+              <div class="comfort-line-tag">
+                <span class="status-dot"></span>
+                <span>Free Unlimited</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 4: CONNECTOR STANDARDS & VEHICLE MATCH
+         ========================================================= -->
+    <section class="network-section" id="connectors">
+      <div class="site-container">
+        <div class="section-head">
+          <div class="section-eyebrow">Plug Compatibility</div>
+          <h2 class="section-title">Supported Charging Standards</h2>
+          <p class="section-subtitle">
+            Reliable hardware engineered to support every EV make and model currently on the market.
+          </p>
+        </div>
+
+        <div class="connector-quad-grid">
+          <!-- Standard 1: CCS Combo 2 -->
+          <article class="connector-card">
+            <div class="connector-card-top">
+              <div class="connector-kw-badge">
+                <span>Up to 350 kW</span>
+              </div>
+              <h3 class="connector-title">CCS Combo 2</h3>
+              <p class="connector-desc">
+                High-power DC standard for European and North American fast-charge electric vehicles.
+              </p>
+            </div>
+            <div class="connector-bottom">
+              <div class="connector-compat-label">Popular Vehicles</div>
+              <div class="connector-vehicles-tag">
+                Porsche &bull; Hyundai &bull; BMW &bull; Rivian
+              </div>
+            </div>
+          </article>
+
+          <!-- Standard 2: NACS (Tesla) -->
+          <article class="connector-card">
+            <div class="connector-card-top">
+              <div class="connector-kw-badge">
+                <span>Up to 350 kW</span>
+              </div>
+              <h3 class="connector-title">NACS (Tesla)</h3>
+              <p class="connector-desc">
+                Native fast-charging integration with automated seamless Plug &amp; Charge handshake.
+              </p>
+            </div>
+            <div class="connector-bottom">
+              <div class="connector-compat-label">Popular Vehicles</div>
+              <div class="connector-vehicles-tag">
+                Tesla &bull; Ford &bull; GM &bull; Rivian &bull; Volvo
+              </div>
+            </div>
+          </article>
+
+          <!-- Standard 3: CHAdeMO -->
+          <article class="connector-card">
+            <div class="connector-card-top">
+              <div class="connector-kw-badge cyan">
+                <span>Up to 100 kW</span>
+              </div>
+              <h3 class="connector-title">CHAdeMO Rapid</h3>
+              <p class="connector-desc">
+                Dedicated DC rapid charging standard for Asian passenger cars and commercial utility fleets.
+              </p>
+            </div>
+            <div class="connector-bottom">
+              <div class="connector-compat-label">Popular Vehicles</div>
+              <div class="connector-vehicles-tag">
+                Nissan LEAF &bull; Mitsubishi Outlander
+              </div>
+            </div>
+          </article>
+
+          <!-- Standard 4: Type 2 AC -->
+          <article class="connector-card">
+            <div class="connector-card-top">
+              <div class="connector-kw-badge violet">
+                <span>Up to 22 kW</span>
+              </div>
+              <h3 class="connector-title">Type 2 Mennekes</h3>
+              <p class="connector-desc">
+                Three-phase destination AC charging for plug-in hybrids and extended dwell charging.
+              </p>
+            </div>
+            <div class="connector-bottom">
+              <div class="connector-compat-label">Compatibility</div>
+              <div class="connector-vehicles-tag">
+                Universal AC Compatibility plug-in
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 5: DRIVER NAVIGATION CTA
+         (Mandatory Final Section)
+         ========================================================= -->
+    <section class="network-section" id="navigation-cta">
+      <div class="site-container">
+        <div class="cta-banner-wrapper">
+          <img src="assets/images/sections/p30.jpg" alt="Sleek electric vehicle parked at ultra-fast charging corridor"
+            class="cta-backdrop-img">
+          <div class="cta-content-box">
+            <div class="section-eyebrow">Zero Range Anxiety</div>
+            <h2 class="cta-title">Never Run Out of Power on the Open Road</h2>
+            <p class="cta-desc">
+              Download the VoltPulse mobile app or launch in-car GPS navigation to reserve your high-power bay before
+              arrival.
+            </p>
+            <div class="cta-btn-group">
+              <a href="login.html" class="cta-primary-btn">
+                <span>Open Driver Portal</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" style="width: 18px; height: 18px;" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="pricing.html" class="cta-secondary-btn">
+                <span>View Tariff Rates</span>
+              </a>
+            </div>
+            <div class="cta-store-badges">
+              <span class="store-badge-pill">99.9% Station Uptime</span>
+              <span class="store-badge-pill">Live Battery Telemetry</span>
+              <span class="store-badge-pill">Instant AutoCharge</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 4. Shared Footer Architecture -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-main-grid">
+        <!-- Col 1: Brand Info & Status -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand-link">
+            <img src="assets/images/logo.png" alt="VoltPulse EV Network Logo" class="footer-logo-img">
+            <div class="footer-brand-meta">
+              <span class="footer-brand-name"><span>Volt</span>Pulse</span>
+              <span class="footer-brand-tagline">EV Charging Network</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Empowering the transition to zero-emission mobility with high-speed DC fast charging networks, intelligent
+            grid balancing, and seamless driver access nationwide.
+          </p>
+          <div class="footer-status-pill">
+            <span class="status-dot"></span>
+            All Network Stations Operational
+          </div>
+          <!-- Social Media Channels -->
+          <div class="footer-social-links" aria-label="Official Social Channels">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="X (formerly Twitter)">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.82 0-1.666.28-1.897.905-.14.378-.209.897-.209 1.554v1.526h3.909l-.517 3.667h-3.392v7.98h-4.896z"/>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Network Navigation -->
+        <div>
+          <h2 class="footer-col-title">Network</h2>
+          <ul class="footer-links-list">
+            <li><a href="find-charger.html" class="footer-link">Find a Charger Map</a></li>
+            <li><a href="pricing.html" class="footer-link">Tariffs & Subscriptions</a></li>
+            <li><a href="home-2.html" class="footer-link">Fleet Depot Solutions</a></li>
+            <li><a href="about.html" class="footer-link">Green Energy Grid</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Drivers & Support -->
+        <div>
+          <h2 class="footer-col-title">Driver Hub</h2>
+          <ul class="footer-links-list">
+            <li><a href="dashboard.html" class="footer-link">Driver Dashboard & RFID Sync</a></li>
+            <li><a href="dashboard.html" class="footer-link">Session History & Receipts</a></li>
+            <li><a href="about.html" class="footer-link">About VoltPulse</a></li>
+            <li><a href="contact.html" class="footer-link">24/7 Driver Roadside Help</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Dispatch Updates -->
+        <div>
+          <h2 class="footer-col-title">Station Alerts</h2>
+          <div class="footer-newsletter-box">
+            <p class="footer-newsletter-text">
+              Subscribe to newly commissioned ultra-fast charging corridors and off-peak tariff updates.
+            </p>
+            <form class="footer-form" id="station-alert-form">
+              <input type="email" placeholder="driver@domain.com" required class="footer-input"
+                aria-label="Email address for station updates">
+              <button type="submit" class="footer-submit-btn">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 VoltPulse EV Network Operator Inc. All rights reserved.
+        </div>
+        <ul class="footer-legal-links">
+          <li><a href="about.html">Privacy Policy</a></li>
+          <li><a href="about.html">Terms of Service</a></li>
+          <li><a href="about.html">Grid Security</a></li>
+          <li><a href="contact.html">Support</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 5. Scroll-To-Top Button -->
+  <button type="button" id="scroll-to-top" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

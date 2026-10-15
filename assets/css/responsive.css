@@ -1,0 +1,2108 @@
+/* ==========================================================================
+   VoltPulse EV Network - Responsive System
+   Supports 320px, 375px, 425px, 768px, 820px, 1024px, 1280px, 1440px, 1920px+
+   ========================================================================== */
+
+/* ==========================================================================
+   Tablet Header Breakpoint: iPad Mini, iPad Pro 11", iPad Pro 12.9"/13" (<= 1376px)
+   Shows ONLY the mobile menu hamburger button on all iPad devices in both portrait and landscape
+   ========================================================================== */
+@media (max-width: 1376px) {
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .header-actions .icon-control-btn,
+  .header-actions .header-login-btn,
+  .header-actions .header-cta-btn {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex !important;
+  }
+}
+
+/* Medium Desktop & Tablet Landscape (<= 1040px - handles 1032px) */
+@media (max-width: 1040px) {
+  .hub-list-column {
+    padding: 1.25rem 1rem;
+    gap: 1rem;
+  }
+
+  .hub-station-item {
+    padding: 1rem 0.85rem;
+  }
+
+  .hub-spec-label {
+    font-size: 0.62rem;
+  }
+
+  .hub-spec-val {
+    font-size: 0.75rem;
+  }
+}
+
+/* Tablet & Mobile Breakpoints (<= 1040px - covers 1032px iPad Pro 13) */
+@media (max-width: 1040px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .header-actions .icon-control-btn,
+  .header-actions .header-login-btn,
+  .header-actions .header-cta-btn {
+    display: none !important;
+  }
+
+  .header-container,
+  .site-container,
+  .footer-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Home 1 Responsive Grids */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-img {
+    height: 380px;
+  }
+
+  .locator-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .station-quad-grid,
+  .station-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+
+
+  .power-tier-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .app-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .app-screenshot-img {
+    height: 380px;
+  }
+
+  /* Home 2 Responsive Grids */
+  .home2-hero-glass-box {
+    padding: 0;
+  }
+
+  .planner-wrapper-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .planner-visual-card {
+    height: 340px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 1.25rem;
+  }
+
+  .fleet-section-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .fleet-visual-card {
+    height: 340px;
+  }
+
+  .connected-driver-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .connected-driver-visual {
+    height: 340px;
+    min-height: auto;
+  }
+
+  /* Find a Charger Responsive Grids */
+  .hub-explorer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hub-map-card {
+    min-height: 380px;
+  }
+
+  .comfort-line-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .hub-amenities-quad {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .connector-quad-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* Pricing Page Responsive Grids */
+  .pricing-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .pricing-tiers-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .pricing-plan-card {
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .transparency-quad-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .payment-methods-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .payment-visual-card {
+    height: 320px;
+  }
+
+  /* About Page Responsive Grids */
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-hero-visual {
+    height: 320px;
+  }
+
+  .green-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .green-grid-visual {
+    height: 320px;
+  }
+
+  .engineering-quad-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .roadmap-timeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* Contact Page Responsive Grids */
+  .contact-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contact-hero-img {
+    height: 320px;
+  }
+
+  .contact-main-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .contact-form-card,
+  .contact-hotline-card {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .regional-quad-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* Dashboard Responsive Grids */
+  .dashboard-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .dashboard-hero-img {
+    height: 320px;
+  }
+
+  .session-monitor-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .wallet-grid,
+  .fleet-tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+/* Medium Devices (<= 768px) */
+@media (max-width: 768px) {
+  .site-header {
+    height: 60px;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+
+  .header-container,
+  .site-container,
+  .footer-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .network-section {
+    padding: 3.75rem 0;
+  }
+
+  .section-head {
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-section {
+    padding: 2.5rem 0 3.5rem;
+  }
+
+  .hero-search-form {
+    flex-direction: column;
+  }
+
+  .hero-search-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding-top: 1.25rem;
+    align-items: flex-start;
+  }
+
+  .hero-stat-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .hero-stat-number {
+    font-size: 1.85rem;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .hero-stat-label {
+    font-size: 0.775rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-top: 0.35rem;
+    line-height: 1.35;
+  }
+
+  [dir="rtl"] .hero-stat-item {
+    text-align: right;
+  }
+
+  .station-quad-grid,
+  .station-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+
+  .station-filter-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .station-filter-header .filter-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  .filter-telemetry-badge {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  .station-action-strip {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+  }
+
+  .station-action-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .station-action-buttons .cta-primary-btn,
+  .station-action-buttons .cta-secondary-btn {
+    width: auto;
+    justify-content: center;
+  }
+
+  .power-tier-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .home2-hero-title {
+    font-size: 2.15rem;
+    line-height: 1.15;
+  }
+
+  .home2-hero-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .home2-hero-actions a {
+    width: auto;
+    justify-content: center;
+  }
+
+  .planner-wrapper-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .planner-widget-card {
+    padding: 1.5rem 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .planner-visual-card {
+    height: 250px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .planner-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planner-result-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .planner-result-box .badge-speed-pill {
+    align-self: flex-start;
+  }
+
+  .planner-select {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 2rem;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .amenity-card {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.15rem;
+  }
+
+  .amenity-card-img-wrap {
+    height: 190px;
+    min-height: 190px;
+  }
+
+
+  .fleet-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comfort-line-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .hub-amenities-quad {
+    grid-template-columns: 1fr;
+  }
+
+  .connector-quad-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .transparency-quad-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .engineering-quad-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmap-timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats-matrix {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0 2rem;
+  }
+
+  .contact-hero-img {
+    height: 260px;
+  }
+
+  .contact-hero-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .contact-hero-actions a {
+    width: auto;
+    justify-content: center;
+  }
+
+  .contact-fields-row {
+    grid-template-columns: 1fr;
+  }
+
+  .regional-quad-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0 2rem;
+  }
+
+  .dashboard-hero-img {
+    height: 260px;
+  }
+
+  .dashboard-hero-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-hero-actions a {
+    width: auto;
+    justify-content: center;
+  }
+
+  .session-metrics-matrix {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .wallet-grid,
+  .fleet-tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-map-overlay {
+    position: static;
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .contact-map-btn {
+    width: auto;
+    justify-content: center;
+  }
+
+  .cta-content-box {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .cta-btn-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .cta-primary-btn,
+  .cta-secondary-btn {
+    width: auto;
+    max-width: none;
+    justify-content: center;
+    padding: 0.9rem 1.85rem;
+  }
+
+  .brand-logo-img {
+    height: 38px;
+    width: 38px;
+  }
+
+  .brand-name {
+    font-size: 1.05rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.65rem;
+  }
+
+  #scroll-to-top {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .hub-list-column {
+    padding: 1.15rem 0.95rem;
+    gap: 1rem;
+  }
+
+  .hub-station-item {
+    padding: 0.95rem 0.85rem;
+  }
+
+  .hub-spec-label {
+    font-size: 0.62rem;
+  }
+
+  .hub-spec-val {
+    font-size: 0.75rem;
+  }
+
+  [dir="rtl"] #scroll-to-top {
+    left: 1.25rem;
+  }
+}
+
+/* ==========================================================================
+   Footer Responsive Layout: 2x2 Grid Model
+   Active specifically on 768px, 960px, and 1032px (viewports 768px to 1040px)
+   Matches the reference architecture:
+   - Row 1: Brand Info & Social Icons (Left) | Network Navigation (Right)
+   - Row 2: Driver Hub Navigation (Left)    | Station Alerts & Hotline (Right)
+   ========================================================================== */
+@media (max-width: 1040px) and (min-width: 768px) {
+  .site-footer {
+    padding: 4.5rem 0 2rem;
+  }
+
+  .footer-main-grid {
+    display: grid !important;
+    grid-template-columns: 1.15fr 1fr !important;
+    gap: 3.5rem 3rem !important;
+  }
+
+  /* Row 1, Column 1: Brand Information & Social Icons */
+  .footer-brand-col {
+    grid-column: 1 / 2 !important;
+    grid-row: 1 / 2 !important;
+  }
+
+  /* Row 1, Column 2: Navigation Links */
+  .footer-main-grid > div:nth-child(2) {
+    grid-column: 2 / 3 !important;
+    grid-row: 1 / 2 !important;
+  }
+
+  /* Row 2, Column 1: Driver Hub Links */
+  .footer-main-grid > div:nth-child(3) {
+    grid-column: 1 / 2 !important;
+    grid-row: 2 / 3 !important;
+  }
+
+  /* Row 2, Column 2: Station Alerts & Subscription Box */
+  .footer-main-grid > div:nth-child(4) {
+    grid-column: 2 / 3 !important;
+    grid-row: 2 / 3 !important;
+  }
+
+  .footer-desc {
+    max-width: 100% !important;
+    font-size: 0.95rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .footer-social-links {
+    margin-top: 0.5rem !important;
+  }
+
+  .footer-bottom-bar {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-top: 2rem !important;
+  }
+
+  .footer-legal-links {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1.75rem !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+  }
+}
+
+/* Mobile Footer Layout (< 768px) - Clean 1-Column Stack */
+@media (max-width: 767px) {
+  .footer-main-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2.25rem !important;
+  }
+
+  .footer-brand-col,
+  .footer-main-grid > div:nth-child(2),
+  .footer-main-grid > div:nth-child(3),
+  .footer-main-grid > div:nth-child(4) {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .footer-bottom-bar {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1.25rem !important;
+  }
+
+  .footer-legal-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Mobile Devices (<= 440px - Covers 440px, 427px, 393px, iPhone Pro Max, Pixel) */
+@media (max-width: 440px) {
+  .header-container,
+  .site-container,
+  .footer-container {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .hub-list-column {
+    padding: 0.95rem 0.75rem;
+    gap: 0.85rem;
+  }
+
+  .hub-station-item {
+    padding: 0.85rem 0.75rem;
+  }
+
+  .hub-station-title {
+    font-size: 0.98rem;
+  }
+
+  .hub-station-address {
+    font-size: 0.76rem;
+  }
+
+  .hub-status-badge {
+    font-size: 0.68rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .hub-spec-label {
+    font-size: 0.6rem;
+  }
+
+  .hub-spec-val {
+    font-size: 0.73rem;
+  }
+
+  .brand-logo-img {
+    height: 34px;
+    width: 34px;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+
+  .hero-img {
+    height: 300px;
+  }
+
+  .hero-stats-row {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+
+  .hero-stat-number {
+    font-size: 1.45rem !important;
+  }
+
+  .hero-stat-label {
+    font-size: 0.68rem !important;
+  }
+
+  .hero-floating-badge {
+    position: static;
+    margin-top: 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .station-map-container {
+    min-height: 340px;
+  }
+
+  .station-filter-header .filter-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-search-chips {
+    gap: 0.4rem;
+    align-items: flex-start;
+  }
+
+  .hero-search-chips span {
+    width: 100%;
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-subtle);
+    margin-bottom: 0.15rem;
+  }
+
+  .hero-search-chips .chip-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.55rem;
+  }
+
+  .station-card-body {
+    padding: 1rem 0.85rem;
+  }
+
+  .station-card-specs {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem;
+    padding: 0.55rem 0.3rem;
+    text-align: center;
+  }
+
+  .station-card-specs .spec-chip {
+    min-width: 0;
+    padding: 0 0.15rem;
+  }
+
+  .station-card-specs .spec-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.03em;
+  }
+
+  .station-card-specs .spec-val {
+    font-size: 0.72rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .station-card-img-wrap {
+    height: 170px;
+  }
+
+  .power-card-media {
+    height: 180px;
+  }
+
+  .process-card-visual {
+    height: 165px;
+  }
+
+
+
+  .map-overlay-card {
+    position: static;
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+
+
+  .app-screenshot-img {
+    height: 300px;
+  }
+
+  .app-floating-telemetry {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  .mobile-drawer {
+    max-width: 100%;
+  }
+
+  .footer-form {
+    flex-direction: column;
+  }
+
+  .footer-submit-btn {
+    width: 100%;
+  }
+
+  .contact-hero-overlay-badge {
+    position: static;
+    margin-top: 0.85rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .contact-badge-pill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dashboard-telemetry-badge {
+    position: static;
+    margin-top: 0.85rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .portal-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-controller-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-session-actions-row {
+    flex-direction: column;
+  }
+
+  .portal-start-btn,
+  .portal-stop-btn {
+    width: 100%;
+  }
+
+  .portal-station-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .portal-mini-action-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Home 2 Journey Planner at 425px */
+  .home2-hero-title {
+    font-size: 1.7rem;
+  }
+
+  .planner-widget-card {
+    padding: 1.15rem 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .planner-visual-card {
+    height: 210px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .planner-input,
+  .planner-select {
+    font-size: 0.85rem;
+    padding: 0.65rem 0.8rem;
+  }
+
+  .planner-result-box {
+    padding: 0.85rem;
+    gap: 0.65rem;
+  }
+
+  .planner-result-title {
+    font-size: 0.88rem;
+    line-height: 1.35;
+  }
+
+  .planner-result-sub {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .hero-search-btn {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.88rem;
+  }
+
+  #scroll-to-top {
+    bottom: 0.85rem;
+    right: 0.75rem;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* =========================================================
+   Ultra-Compact Mobile Viewports (<= 375px & 360px)
+   ========================================================= */
+@media (max-width: 375px) {
+  .header-container,
+  .site-container,
+  .footer-container {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
+
+  /* Hero search chips alignment */
+  .hero-search-chips {
+    gap: 0.35rem;
+  }
+
+  .hero-search-chips span {
+    font-size: 0.7rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .hero-search-chips .chip-tag {
+    font-size: 0.72rem;
+    padding: 0.22rem 0.5rem;
+  }
+
+  /* Station card specs clean 3-col horizontal grid */
+  .station-card-body {
+    padding: 0.85rem 0.65rem;
+    gap: 0.75rem;
+  }
+
+  .station-card-title {
+    font-size: 0.96rem;
+  }
+
+  .station-card-loc {
+    font-size: 0.74rem;
+  }
+
+  .station-card-specs {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
+    padding: 0.5rem 0.2rem;
+    text-align: center;
+  }
+
+  .station-card-specs .spec-chip {
+    padding: 0 0.1rem;
+  }
+
+  .station-card-specs .spec-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.02em;
+  }
+
+  .station-card-specs .spec-val {
+    font-size: 0.68rem;
+    letter-spacing: -0.01em;
+  }
+
+  .station-card-footer {
+    padding-top: 0.65rem;
+  }
+
+  .station-card-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .rate-amount {
+    font-size: 1.05rem;
+  }
+
+  /* Journey Planner on 375px */
+  .planner-widget-card {
+    padding: 1rem 0.8rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .planner-visual-card {
+    height: 190px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .planner-label {
+    font-size: 0.72rem;
+  }
+
+  .planner-input,
+  .planner-select {
+    font-size: 0.82rem;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .planner-result-title {
+    font-size: 0.85rem;
+  }
+
+  .planner-result-sub {
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+
+  .hero-search-btn {
+    font-size: 0.82rem;
+    padding: 0.7rem 0.75rem;
+  }
+
+  #scroll-to-top {
+    bottom: 0.75rem;
+    right: 0.65rem;
+    width: 34px;
+    height: 34px;
+  }
+
+  /* Pricing pills alignment */
+  .hero-action-pills {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .hero-pill-item {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.78rem;
+    padding: 0.45rem 0.75rem;
+    text-align: center;
+  }
+
+  /* Station Hub on 375px */
+  .hub-list-column {
+    padding: 0.85rem 0.65rem;
+  }
+
+  .hub-station-item {
+    padding: 0.8rem 0.65rem;
+  }
+
+  .hub-spec-label {
+    font-size: 0.56rem;
+  }
+
+  .hub-spec-val {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-container,
+  .site-container,
+  .footer-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .brand-logo-img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .brand-name {
+    font-size: 0.9rem;
+  }
+
+  .hero-search-chips {
+    gap: 0.3rem;
+  }
+
+  .hero-search-chips .chip-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.45rem;
+  }
+
+  .station-card-specs {
+    gap: 0.15rem;
+    padding: 0.45rem 0.15rem;
+  }
+
+  .station-card-specs .spec-label {
+    font-size: 0.52rem;
+  }
+
+  .station-card-specs .spec-val {
+    font-size: 0.65rem;
+  }
+
+  .station-card-btn {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.72rem;
+  }
+
+  .rate-amount {
+    font-size: 1rem;
+  }
+
+  .station-rate-text {
+    font-size: 0.75rem;
+  }
+
+  .planner-widget-card {
+    padding: 0.85rem 0.7rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .planner-visual-card {
+    height: 175px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .planner-input,
+  .planner-select {
+    font-size: 0.78rem;
+    padding: 0.55rem 0.65rem;
+  }
+
+  .hero-search-btn {
+    font-size: 0.78rem;
+  }
+
+  /* Station Hub on 360px */
+  .hub-list-column {
+    padding: 0.75rem 0.55rem;
+  }
+
+  .hub-station-item {
+    padding: 0.75rem 0.6rem;
+  }
+
+  .hub-station-details {
+    gap: 0.25rem;
+  }
+
+  .hub-spec-chip {
+    gap: 0.1rem;
+  }
+
+  .hub-spec-label {
+    font-size: 0.52rem;
+  }
+
+  .hub-spec-val {
+    font-size: 0.66rem;
+  }
+}
+
+/* ==========================================================================
+   Tablet & Mobile Breakpoints for Portal Layout & Numbers
+   Supports 1280, 1032, 960, 768, 440, 427, 412, 393, 375, 360 px viewports
+   ========================================================================== */
+
+/* 1032px and 960px Viewports */
+@media (max-width: 1100px) {
+  .portal-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .portal-metric-value {
+    font-size: 2rem;
+  }
+
+  .portal-panels-grid,
+  .portal-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .portal-main-panel {
+    padding: 1.75rem;
+  }
+}
+
+/* 768px Tablet Viewport */
+@media (max-width: 768px) {
+  .portal-workspace {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .portal-sidebar {
+    width: 100%;
+    position: sticky;
+    top: 64px;
+    height: auto;
+    z-index: 900;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.65rem 0.85rem;
+    background-color: var(--bg-surface);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    overflow-x: auto;
+    overflow-y: visible;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .portal-nav-list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+
+  .portal-nav-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .portal-nav-link {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.825rem;
+  }
+
+  .portal-nav-link.active::before {
+    left: 15%;
+    right: 15%;
+    top: auto;
+    bottom: 0;
+    width: auto;
+    height: 3px;
+    border-radius: 4px 4px 0 0;
+  }
+
+  [dir="rtl"] .portal-nav-link.active::before {
+    left: 15%;
+    right: 15%;
+  }
+
+  .portal-sidebar-card {
+    display: none;
+  }
+
+  .portal-welcome-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  .portal-welcome-title {
+    font-size: 1.85rem;
+  }
+
+  .portal-action-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Mobile Header: ONLY brand logo, brand name, RTL, and Dark Mode buttons */
+  .portal-topbar {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .portal-topbar .portal-status-pill,
+  .portal-topbar .portal-logout-btn {
+    display: none !important;
+  }
+
+  .portal-topbar-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .portal-brand-group {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .portal-brand-logo {
+    height: 36px;
+    width: auto;
+  }
+
+  .portal-brand-name {
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .portal-brand-sub {
+    display: none !important;
+  }
+
+  .portal-main-panel {
+    padding: 1.25rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .portal-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  .portal-metric-card {
+    padding: 1.15rem 1rem;
+  }
+
+  .portal-metric-value {
+    font-size: 1.85rem;
+  }
+
+  .portal-metric-note {
+    font-size: 0.75rem;
+  }
+
+  .portal-ctrl-stat-num {
+    font-size: 1.25rem;
+  }
+
+  #overview-section,
+  #nearby-stations-section,
+  #initiate-charging-section,
+  #payment-methods-section {
+    scroll-margin-top: 130px;
+  }
+}
+
+/* Medium Mobile Viewports (<= 580px) */
+@media (max-width: 580px) {
+  .portal-station-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    text-align: left;
+  }
+
+  .portal-station-item .portal-controller-row {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .portal-session-controller .portal-controller-row:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+    width: 100%;
+  }
+
+  .portal-session-controller .portal-controller-row:first-child > div {
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer-status-pill {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    width: fit-content !important;
+    max-width: 100%;
+    font-size: 0.72rem;
+    padding: 0.35rem 0.65rem;
+    line-height: 1.2;
+  }
+
+  .portal-session-actions-row {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .portal-start-btn,
+  .portal-stop-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .portal-brand-sub {
+    display: none;
+  }
+
+  /* Mobile Stacked Buttons (<= 580px) */
+  .cta-btn-group,
+  .station-action-buttons,
+  .home2-hero-actions,
+  .contact-hero-actions,
+  .dashboard-hero-actions,
+  .contact-hero-actions-centered,
+  .hero-cta-group {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+  }
+
+  .cta-primary-btn,
+  .cta-secondary-btn,
+  .station-action-buttons .cta-primary-btn,
+  .station-action-buttons .cta-secondary-btn,
+  .home2-hero-actions a,
+  .contact-hero-actions a,
+  .dashboard-hero-actions a,
+  .contact-hero-actions-centered a,
+  .hero-cta-group a {
+    width: 100% !important;
+    max-width: 360px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-hero-stats-row {
+    flex-direction: column !important;
+    gap: 1.25rem !important;
+    padding: 1.25rem 1.5rem !important;
+    width: 100% !important;
+    max-width: 360px !important;
+  }
+
+  .about-hero-stat-divider {
+    display: none !important;
+  }
+}
+
+/* 440px, 427px, 412px, 393px Viewports */
+@media (max-width: 440px) {
+  .portal-topbar {
+    padding: 0 0.75rem;
+  }
+
+  .portal-topbar-controls {
+    gap: 0.5rem;
+  }
+
+  .portal-main-panel {
+    padding: 0.85rem 0.65rem;
+    gap: 1.25rem;
+  }
+
+  .portal-welcome-card {
+    padding: 1.25rem 1rem;
+    text-align: left;
+  }
+
+  .portal-welcome-title {
+    font-size: 1.55rem;
+    text-align: left;
+  }
+
+  .portal-welcome-sub {
+    font-size: 0.8rem;
+    text-align: left;
+    line-height: 1.4;
+  }
+
+  .portal-overview-header {
+    text-align: left;
+  }
+
+  .portal-overview-title {
+    text-align: left;
+  }
+
+  .portal-overview-desc {
+    text-align: left;
+  }
+
+  .portal-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .portal-metric-card {
+    padding: 0.9rem 0.75rem;
+    gap: 0.35rem;
+    text-align: left;
+  }
+
+  .portal-metric-label {
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+
+  .portal-metric-value {
+    font-size: 1.6rem;
+    line-height: 1.1;
+    text-align: left;
+  }
+
+  .portal-metric-note {
+    font-size: 0.72rem;
+    line-height: 1.25;
+    text-align: left;
+  }
+
+  .portal-section-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+    text-align: left;
+  }
+
+  .portal-back-overview-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .portal-session-controller .portal-controller-row:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .portal-session-controller .portal-controller-row:first-child > div {
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer-status-pill {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .portal-controller-stats {
+    gap: 0.4rem;
+    padding: 0.75rem 0;
+    text-align: center;
+  }
+
+  .portal-ctrl-stat-num {
+    font-size: 1.05rem;
+    text-align: center;
+  }
+
+  .portal-ctrl-stat-lbl {
+    font-size: 0.64rem;
+    text-align: center;
+  }
+
+  #soc-percent-label {
+    font-size: 1.15rem;
+  }
+
+  .portal-station-name {
+    font-size: 0.875rem;
+    text-align: left;
+  }
+
+  .portal-station-meta {
+    font-size: 0.72rem;
+    text-align: left;
+  }
+
+  .portal-card-item {
+    padding: 0.85rem;
+    text-align: left;
+  }
+
+  .portal-card-digits {
+    font-size: 0.825rem;
+    text-align: left;
+  }
+
+  .portal-card-exp {
+    font-size: 0.7rem;
+    text-align: left;
+  }
+}
+
+/* 375px Standard iPhone Viewport */
+@media (max-width: 375px) {
+  .portal-topbar {
+    padding: 0 0.65rem;
+  }
+
+  .portal-topbar-controls {
+    gap: 0.45rem;
+  }
+
+  .portal-brand-name {
+    font-size: 1.02rem;
+  }
+
+  .portal-main-panel {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .portal-welcome-card {
+    padding: 1.15rem 0.85rem;
+    text-align: left;
+  }
+
+  .portal-welcome-title {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  .portal-welcome-sub {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .portal-overview-header {
+    text-align: left;
+  }
+
+  .portal-overview-title {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  .portal-overview-desc {
+    font-size: 0.78rem;
+    line-height: 1.35;
+    text-align: left;
+  }
+
+  .portal-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .portal-metric-card {
+    padding: 0.8rem 0.65rem;
+    gap: 0.3rem;
+    text-align: left;
+  }
+
+  .portal-metric-label {
+    font-size: 0.62rem;
+    text-align: left;
+  }
+
+  .portal-metric-value {
+    font-size: 1.45rem;
+    line-height: 1.1;
+    text-align: left;
+  }
+
+  .portal-metric-note {
+    font-size: 0.68rem;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .portal-section-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    text-align: left;
+  }
+
+  .portal-back-overview-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .portal-session-controller {
+    padding: 1rem 0.8rem;
+  }
+
+  .portal-session-controller .portal-controller-row:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+    width: 100%;
+  }
+
+  .portal-session-controller .portal-controller-row:first-child > div {
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer-status-pill {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    font-size: 0.68rem;
+    padding: 0.28rem 0.55rem;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  .portal-controller-stats {
+    gap: 0.35rem;
+    text-align: center;
+  }
+
+  .portal-ctrl-stat-num {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .portal-ctrl-stat-lbl {
+    font-size: 0.6rem;
+    text-align: center;
+  }
+
+  #soc-percent-label {
+    font-size: 1.05rem;
+  }
+
+  .portal-station-item {
+    text-align: left;
+  }
+
+  .portal-station-info {
+    text-align: left;
+  }
+
+  .portal-station-name {
+    text-align: left;
+    font-size: 0.85rem;
+  }
+
+  .portal-station-meta {
+    text-align: left;
+    font-size: 0.7rem;
+    line-height: 1.35;
+  }
+
+  .portal-card-sublabel {
+    text-align: left;
+    font-size: 0.62rem;
+  }
+}
+
+/* 360px Compact Viewport */
+@media (max-width: 360px) {
+  .portal-topbar {
+    padding: 0 0.5rem;
+  }
+
+  .portal-topbar-controls {
+    gap: 0.4rem;
+  }
+
+  .portal-brand-logo {
+    height: 32px;
+  }
+
+  .portal-brand-name {
+    font-size: 1rem;
+  }
+
+  .portal-main-panel {
+    padding: 0.65rem 0.45rem;
+  }
+
+  .portal-welcome-card {
+    padding: 1rem 0.75rem;
+    text-align: left;
+  }
+
+  .portal-welcome-title {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .portal-welcome-sub {
+    font-size: 0.75rem;
+    line-height: 1.35;
+    text-align: left;
+  }
+
+  .portal-overview-header {
+    text-align: left;
+  }
+
+  .portal-overview-title {
+    font-size: 1.25rem;
+    text-align: left;
+  }
+
+  .portal-overview-desc {
+    font-size: 0.75rem;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  .portal-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.45rem;
+  }
+
+  .portal-metric-card {
+    padding: 0.75rem 0.55rem;
+    gap: 0.25rem;
+    text-align: left;
+  }
+
+  .portal-metric-label {
+    font-size: 0.58rem;
+    text-align: left;
+  }
+
+  .portal-metric-value {
+    font-size: 1.35rem;
+    line-height: 1.1;
+    text-align: left;
+  }
+
+  .portal-metric-note {
+    font-size: 0.64rem;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .portal-section-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    text-align: left;
+  }
+
+  .portal-back-overview-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.75rem;
+    padding: 0.45rem;
+  }
+
+  .portal-session-controller {
+    padding: 0.85rem 0.65rem;
+  }
+
+  .portal-session-controller .portal-controller-row:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .portal-session-controller .portal-controller-row:first-child > div {
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer-status-pill {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    font-size: 0.64rem;
+    padding: 0.25rem 0.5rem;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  .portal-controller-stats {
+    gap: 0.25rem;
+    text-align: center;
+  }
+
+  .portal-ctrl-stat-num {
+    font-size: 0.88rem;
+    text-align: center;
+  }
+
+  .portal-ctrl-stat-lbl {
+    font-size: 0.54rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  #soc-percent-label {
+    font-size: 0.95rem;
+  }
+
+  .portal-station-item {
+    padding: 0.75rem 0.65rem;
+    text-align: left;
+  }
+
+  .portal-station-name {
+    font-size: 0.82rem;
+    line-height: 1.25;
+    text-align: left;
+  }
+
+  .portal-station-meta {
+    font-size: 0.68rem;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  .portal-card-sublabel {
+    font-size: 0.58rem;
+    text-align: left;
+  }
+
+  .portal-mini-action-btn {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Container Consistency across All Viewports */
+.header-container,
+.footer-container,
+.site-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Page Inner Hero Responsive */
+@media (max-width: 768px) {
+  .page-inner-hero {
+    min-height: 430px;
+    padding: 4rem 1rem 3rem;
+  }
+
+  .about-hero-stats-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.75rem;
+    padding: 1.25rem 2rem;
+    width: fit-content;
+    margin: 0 auto 2.5rem;
+  }
+
+  .about-hero-stat-divider {
+    display: block;
+    width: 1px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .about-hero-stats-row .hero-stat-label,
+  .about-hero-stat-item .hero-stat-label {
+    color: #ffffff !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+    opacity: 0.95 !important;
+  }
+
+  .contact-hero-actions-centered {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .contact-hero-actions-centered a {
+    width: auto;
+    justify-content: center;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .hero-cta-group a {
+    width: auto;
+    justify-content: center;
+  }
+}
+
