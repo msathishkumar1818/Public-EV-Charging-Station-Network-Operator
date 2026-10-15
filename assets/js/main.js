@@ -606,6 +606,32 @@ function initMobileMenu() {
       closeDrawer();
     });
   });
+
+  // Automatically close mobile menu and restore scrolling when switching or resizing to desktop (> 1376px)
+  const desktopMediaQuery = window.matchMedia('(min-width: 1377px)');
+  const handleDesktopBreakpoint = (e) => {
+    if (e.matches) {
+      closeDrawer();
+      document.body.style.overflow = '';
+    }
+  };
+
+  if (desktopMediaQuery.addEventListener) {
+    desktopMediaQuery.addEventListener('change', handleDesktopBreakpoint);
+  } else if (desktopMediaQuery.addListener) {
+    desktopMediaQuery.addListener(handleDesktopBreakpoint);
+  }
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1376) {
+      if (drawer.classList.contains('open') || (overlay && overlay.classList.contains('open'))) {
+        closeDrawer();
+      }
+      if (document.body.style.overflow === 'hidden') {
+        document.body.style.overflow = '';
+      }
+    }
+  });
 }
 
 /* -------------------------------------------------------------

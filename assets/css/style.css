@@ -593,6 +593,30 @@ html.dark .theme-moon-icon {
   transform: translateX(0);
 }
 
+@media (min-width: 1377px) {
+  .mobile-drawer,
+  .mobile-drawer.open {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateX(100%) !important;
+    opacity: 0 !important;
+  }
+
+  [dir="rtl"] .mobile-drawer,
+  [dir="rtl"] .mobile-drawer.open {
+    transform: translateX(-100%) !important;
+  }
+
+  .mobile-drawer-overlay,
+  .mobile-drawer-overlay.open {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+  }
+}
+
 .drawer-header {
   padding: 1.25rem;
   border-bottom: 1px solid var(--border-color);

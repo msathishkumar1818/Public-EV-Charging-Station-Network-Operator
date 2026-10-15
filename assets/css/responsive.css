@@ -23,6 +23,31 @@
   }
 }
 
+/* Strictly hide mobile menu drawer & overlay on Desktop (> 1376px) */
+@media (min-width: 1377px) {
+  .mobile-drawer,
+  .mobile-drawer.open {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateX(100%) !important;
+    opacity: 0 !important;
+  }
+
+  [dir="rtl"] .mobile-drawer,
+  [dir="rtl"] .mobile-drawer.open {
+    transform: translateX(-100%) !important;
+  }
+
+  .mobile-drawer-overlay,
+  .mobile-drawer-overlay.open {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+  }
+}
+
 /* Medium Desktop & Tablet Landscape (<= 1040px - handles 1032px) */
 @media (max-width: 1040px) {
   .hub-list-column {
