@@ -279,12 +279,16 @@
 
 /* Medium Devices (<= 768px) */
 @media (max-width: 768px) {
+  :root {
+    --header-height: 60px;
+  }
+
   .site-header {
-    height: 60px;
+    height: var(--header-height);
   }
 
   body {
-    padding-top: 60px;
+    padding-top: var(--header-height);
   }
 
   .header-container,
@@ -304,6 +308,13 @@
 
   .hero-section {
     padding: 2.5rem 0 3.5rem;
+    min-height: calc(100vh - var(--header-height));
+    min-height: calc(100dvh - var(--header-height));
+  }
+
+  .home2-hero-section {
+    min-height: calc(100vh - var(--header-height));
+    min-height: calc(100dvh - var(--header-height));
   }
 
   .hero-search-form {
@@ -491,7 +502,7 @@
   }
 
   .connector-quad-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.25rem;
   }
 
@@ -2046,8 +2057,10 @@
 /* Page Inner Hero Responsive */
 @media (max-width: 768px) {
   .page-inner-hero {
-    min-height: 430px;
-    padding: 4rem 1rem 3rem;
+    height: var(--inner-hero-height);
+    min-height: var(--inner-hero-height);
+    padding: 2rem 1rem;
+    box-sizing: border-box;
   }
 
   .about-hero-stats-row {
@@ -2055,10 +2068,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1.75rem;
-    padding: 1.25rem 2rem;
+    gap: 1.25rem;
+    padding: 0.65rem 1.25rem;
     width: fit-content;
-    margin: 0 auto 2.5rem;
+    margin: 0 auto;
   }
 
   .about-hero-stat-divider {
